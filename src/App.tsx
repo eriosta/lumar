@@ -6,6 +6,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import LanguageToggle from './components/LanguageToggle';
 import { events, packages, contacts } from './data/events';
 import { useLanguage } from './contexts/LanguageContext';
+import logoImage from './assets/image.png';
 
 function App() {
   const { t } = useLanguage();
@@ -199,6 +200,21 @@ function App() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-16 px-5">
         <div className="max-w-7xl mx-auto text-center">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <img
+              src={logoImage}
+              alt="Lumar Camping Experience Logo"
+              className="max-w-md mx-auto h-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </motion.div>
+          
           <p className="text-base leading-relaxed mb-8">
             <strong className="text-sand">{t('footer.whatToBring')}</strong> {t('footer.items')}
             <br />
