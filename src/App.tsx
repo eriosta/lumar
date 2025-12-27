@@ -1,51 +1,107 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import Hero from './components/Hero';
 import EventCard from './components/EventCard';
+import CalendarView from './components/CalendarView';
 import PackageCard from './components/PackageCard';
 import WhatsAppButton from './components/WhatsAppButton';
-import LanguageToggle from './components/LanguageToggle';
+import MobileHeader from './components/MobileHeader';
+import BottomNav from './components/BottomNav';
+import InstagramSection from './components/InstagramSection';
 import { events, packages, contacts } from './data/events';
 import { useLanguage } from './contexts/LanguageContext';
 import logoImage from './assets/image.png';
 
 function App() {
   const { t } = useLanguage();
+  const [viewMode, setViewMode] = useState<'schedule' | 'calendar'>('schedule');
 
   return (
     <div className="min-h-screen bg-white">
-      <LanguageToggle />
+      <MobileHeader />
       {/* Hero Section */}
       <Hero />
 
-      {/* Events Section */}
-      <section className="py-20 px-5 max-w-7xl mx-auto">
+      {/* Schedule Section */}
+      <section id="events" className="py-20 px-4 sm:px-5 max-w-7xl mx-auto pt-24 md:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-center max-w-3xl mx-auto mb-8 md:mb-12"
         >
           <p className="text-sm uppercase tracking-[3px] text-sage font-semibold mb-4">
             {t('events.badge')}
           </p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-forest mb-5 leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-forest mb-5 leading-tight">
             {t('events.title')}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 font-light">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-6">
             {t('events.description')}
           </p>
+
+          {/* View Toggle */}
+          <div className="flex items-center justify-center gap-3 bg-white rounded-full p-1.5 shadow-md border border-gray-200 inline-flex">
+            <button
+              onClick={() => setViewMode('schedule')}
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all min-h-[44px] min-w-[120px] ${
+                viewMode === 'schedule'
+                  ? 'bg-forest text-white shadow-md'
+                  : 'text-gray-600 hover:text-forest'
+              }`}
+              aria-label="Switch to schedule view"
+            >
+              {t('events.viewToggle.schedule')}
+            </button>
+            <button
+              onClick={() => setViewMode('calendar')}
+              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all min-h-[44px] min-w-[120px] ${
+                viewMode === 'calendar'
+                  ? 'bg-forest text-white shadow-md'
+                  : 'text-gray-600 hover:text-forest'
+              }`}
+              aria-label="Switch to calendar view"
+            >
+              {t('events.viewToggle.calendar')}
+            </button>
+          </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
-          {events.map((event, index) => (
-            <EventCard key={event.id} event={event} index={index} />
-          ))}
-        </div>
+        {/* View Content */}
+        <AnimatePresence mode="wait">
+          {viewMode === 'schedule' && (
+            <motion.div
+              key="schedule"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12"
+            >
+              {events.map((event, index) => (
+                <EventCard key={event.id} event={event} index={index} />
+              ))}
+            </motion.div>
+          )}
+
+          {viewMode === 'calendar' && (
+            <motion.div
+              key="calendar"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="mt-8 md:mt-12"
+            >
+              <CalendarView events={events} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
 
       {/* Packages Section */}
-      <section className="py-16 px-5 bg-sand-light">
+      <section id="packages" className="py-16 px-4 sm:px-5 bg-sand-light pb-24 md:pb-16">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -57,15 +113,15 @@ function App() {
             <p className="text-sm uppercase tracking-[3px] text-sage font-semibold mb-3">
               {t('packages.badge')}
             </p>
-            <h2 className="font-display text-4xl md:text-5xl text-forest mb-4 leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-forest mb-4 leading-tight">
               {t('packages.title')}
             </h2>
-            <p className="text-base md:text-lg text-gray-600 font-light">
+            <p className="text-base md:text-lg text-gray-600 font-light leading-relaxed">
               {t('packages.description')}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {packages.map((pkg, index) => (
               <PackageCard key={pkg.id} package={pkg} index={index} />
             ))}
@@ -74,13 +130,13 @@ function App() {
       </section>
 
       {/* Experience Bar */}
-      <section className="py-20 px-5 bg-gradient-to-br from-forest to-forest-light text-white">
+      <section className="py-20 px-4 sm:px-5 bg-gradient-to-br from-forest to-forest-light text-white">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-display text-4xl md:text-5xl text-sand mb-5"
+            className="font-display text-3xl sm:text-4xl md:text-5xl text-sand mb-5"
           >
             {t('experience.title')}
           </motion.h2>
@@ -89,12 +145,12 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto mb-16 font-light"
+            className="text-base sm:text-lg md:text-xl opacity-90 max-w-3xl mx-auto mb-12 md:mb-16 font-light leading-relaxed"
           >
             {t('experience.description')}
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {[
               { 
                 icon: (
@@ -149,8 +205,11 @@ function App() {
         </div>
       </section>
 
+      {/* Instagram Section */}
+      <InstagramSection />
+
       {/* WhatsApp Booking Section */}
-      <section id="booking" className="py-28 px-5 bg-white">
+      <section id="booking" className="py-20 md:py-28 px-4 sm:px-5 bg-white pb-24 md:pb-28">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -158,14 +217,14 @@ function App() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-forest mb-6">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-forest mb-6 leading-tight">
               {t('booking.title')}
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 mb-12 font-light">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-10 md:mb-12 font-light leading-relaxed">
               {t('booking.description')}
             </p>
 
-            <div className="space-y-5 max-w-lg mx-auto">
+            <div className="space-y-4 md:space-y-5 max-w-lg mx-auto">
               {contacts.map((contact, index) => (
                 <motion.div
                   key={contact.phone}
@@ -185,9 +244,9 @@ function App() {
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
               whileHover={{ scale: 1.02 }}
-              className="mt-12 bg-sand-light p-8 rounded-2xl"
+              className="mt-10 md:mt-12 bg-sand-light p-6 md:p-8 rounded-2xl"
             >
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p className="text-base md:text-lg leading-relaxed text-gray-700">
                 {t('booking.deposit')} <strong className="text-sunset text-xl">{t('booking.depositAmount')}</strong>
                 <br />
                 {t('booking.balance')}
@@ -198,7 +257,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-16 px-4 sm:px-5">
+      <footer className="bg-gray-900 text-gray-400 py-12 md:py-16 px-4 sm:px-5 pb-24 md:pb-16">
         <div className="max-w-7xl mx-auto text-center">
           {/* Logo */}
           <motion.div
@@ -215,16 +274,17 @@ function App() {
             />
           </motion.div>
           
-          <p className="text-base leading-relaxed mb-8">
+          <p className="text-base leading-relaxed mb-6 md:mb-8">
             <strong className="text-sand">{t('footer.whatToBring')}</strong> {t('footer.items')}
             <br />
             <em className="text-sm">{t('footer.relax')}</em>
           </p>
-          <p className="text-sm opacity-70 mt-8">
+          <p className="text-sm opacity-70 mt-6 md:mt-8">
             {t('footer.copyright')}
           </p>
         </div>
       </footer>
+      <BottomNav />
     </div>
   );
 }

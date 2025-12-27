@@ -49,13 +49,21 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
 const translations: Record<Language, Record<string, string>> = {
   en: {
+    // Navigation
+    'nav.events': 'Schedule',
+    'nav.packages': 'Packages',
+    'nav.book': 'Book Now',
+    'nav.home': 'Home',
+    
     // Hero
     'hero.subtitle': 'Experience the magic of Texas State Parks with fully equipped glamping, expert setup, and unforgettable outdoor adventures.',
     'hero.button': 'Book Your Adventure',
     
-    // Events Section
+    // Schedule/Events Section
     'events.badge': 'Upcoming Adventures 2026',
     'events.title': 'Discover Texas State Parks',
+    'events.viewToggle.schedule': 'Schedule View',
+    'events.viewToggle.calendar': 'Calendar View',
     'events.description': 'Handpicked locations featuring pristine rivers, scenic trails, and breathtaking Hill Country landscapes',
     'events.visitPark': 'Visit Park',
     'events.viewMap': 'View Map',
@@ -112,6 +120,14 @@ const translations: Record<Language, Record<string, string>> = {
     'booking.balance': 'Pay the remaining balance 1 week before your camping weekend',
     'booking.message': 'Message',
     
+    // Instagram Section
+    'instagram.title': 'Follow Our Adventures',
+    'instagram.description': 'Join us on Instagram for camping tips, park highlights, and stunning Texas landscapes',
+    'instagram.followButton': 'Follow',
+    'instagram.handle': 'lumar.adventures',
+    'instagram.hashtag': 'Share your camping moments:',
+    'instagram.viewMore': 'View More on Instagram',
+    
     // Footer
     'footer.whatToBring': 'What to Bring:',
     'footer.items': 'Bedsheets • Pillows • Personal care items • Groceries • Paper plates & cups',
@@ -119,13 +135,21 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.copyright': '© 2026 Lumar Camping Experience. Creating unforgettable outdoor memories across Texas.',
   },
   es: {
+    // Navigation
+    'nav.events': 'Calendario',
+    'nav.packages': 'Paquetes',
+    'nav.book': 'Reservar',
+    'nav.home': 'Inicio',
+    
     // Hero
     'hero.subtitle': 'Descubre la magia de los Parques Estatales de Texas con glamping totalmente equipado, instalación profesional y aventuras inolvidables bajo las estrellas.',
     'hero.button': 'Reserva Tu Aventura',
     
-    // Events Section
+    // Schedule/Events Section
     'events.badge': 'Próximas Aventuras 2026',
     'events.title': 'Explora los Parques Estatales de Texas',
+    'events.viewToggle.schedule': 'Vista de Lista',
+    'events.viewToggle.calendar': 'Vista de Calendario',
     'events.description': 'Ubicaciones cuidadosamente seleccionadas con ríos cristalinos, senderos panorámicos y los impresionantes paisajes de Hill Country',
     'events.visitPark': 'Ver Parque',
     'events.viewMap': 'Ver Mapa',
@@ -181,6 +205,14 @@ const translations: Record<Language, Record<string, string>> = {
     'booking.depositAmount': 'depósito de $50',
     'booking.balance': 'Paga el saldo restante una semana antes de tu fin de semana de acampada',
     'booking.message': 'Mensaje',
+    
+    // Instagram Section
+    'instagram.title': 'Sigue Nuestras Aventuras',
+    'instagram.description': 'Únete a nosotros en Instagram para consejos de acampada, destinos destacados y paisajes impresionantes de Texas',
+    'instagram.followButton': 'Seguir',
+    'instagram.handle': 'lumar.adventures',
+    'instagram.hashtag': 'Comparte tus momentos de acampada:',
+    'instagram.viewMore': 'Ver Más en Instagram',
     
     // Footer
     'footer.whatToBring': 'Qué Traer:',

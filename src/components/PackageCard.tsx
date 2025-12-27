@@ -52,7 +52,7 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
         viewport={{ once: true }}
         transition={{ delay: index * 0.1, duration: 0.6 }}
         whileHover={{ y: -6, scale: 1.02 }}
-        className={`relative rounded-3xl p-8 md:p-10 transition-all duration-300 overflow-visible ${
+        className={`relative rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-300 overflow-visible ${
           pkg.isFeatured
             ? 'bg-gradient-to-br from-forest via-forest to-forest-light text-white border-2 border-sunset shadow-2xl'
             : 'bg-white text-gray-800 border-2 border-gray-200 shadow-lg'
@@ -64,17 +64,17 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
         )}
 
       {/* Header Section */}
-      <div className="mb-6">
-        <div className="flex items-start justify-between mb-3 gap-4">
+      <div className="mb-5 sm:mb-6">
+        <div className="flex items-start justify-between mb-3 gap-3 sm:gap-4">
           <div className="flex-1 min-w-0">
-            <h3 className={`text-xl md:text-2xl font-bold mb-2 ${pkg.isFeatured ? 'text-white' : 'text-gray-900'}`}>
+            <h3 className={`text-lg sm:text-xl md:text-2xl font-bold mb-2 leading-tight ${pkg.isFeatured ? 'text-white' : 'text-gray-900'}`}>
               {t(`packages.${pkg.id}.name`)}
             </h3>
             <div className={`text-xs uppercase tracking-widest font-semibold ${pkg.isFeatured ? 'text-white/70' : 'text-gray-500'}`}>
               {t('packages.duration')}
             </div>
           </div>
-          <div className={`text-4xl md:text-5xl font-extrabold leading-none flex-shrink-0 ${pkg.isFeatured ? 'text-sand' : 'text-forest'}`}>
+          <div className={`text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none flex-shrink-0 ${pkg.isFeatured ? 'text-sand' : 'text-forest'}`}>
             ${pkg.price}
           </div>
         </div>
@@ -98,7 +98,7 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
       <div className={`h-px mb-6 ${pkg.isFeatured ? 'bg-white/20' : 'bg-gray-200'}`} />
 
       {/* Features List */}
-      <ul className="space-y-3">
+      <ul className="space-y-2.5 sm:space-y-3">
         {pkg.features.map((feature, idx) => {
           const translationKey = `packages.${pkg.id}.feature${idx + 1}`;
           const translatedFeature = t(translationKey);
@@ -107,7 +107,7 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
           return (
             <li
               key={idx}
-              className="flex items-start gap-3"
+              className="flex items-start gap-2.5 sm:gap-3"
             >
               <div className={`flex-shrink-0 mt-0.5 rounded-full p-1 ${
                 pkg.isFeatured ? 'bg-sand/20' : 'bg-sage/10'
@@ -119,11 +119,12 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className={`text-sm leading-relaxed flex-1 break-words ${
+              <span className={`text-sm sm:text-base leading-relaxed flex-1 break-words ${
                 pkg.isFeatured ? 'text-white/95' : 'text-gray-700'
               }`}>
                 {displayFeature}

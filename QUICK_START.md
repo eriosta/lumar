@@ -27,7 +27,7 @@ git init
 git add .
 git commit -m "Initial commit - Lumar Camping React app"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/lumar-camping.git
+git remote add origin https://github.com/eriosta/lumar-camping.git
 git push -u origin main
 ```
 
