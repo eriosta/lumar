@@ -64,6 +64,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.fullyBooked': 'Fully booked',
     'events.limitedSpots': 'Limited Spots',
     'events.soldOut': 'Sold Out',
+    'events.comingSoon': 'Coming Soon',
     
     // Packages Section
     'packages.badge': 'Choose Your Experience',
@@ -133,6 +134,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.fullyBooked': 'Completamente reservado',
     'events.limitedSpots': 'Cupos Limitados',
     'events.soldOut': 'Agotado',
+    'events.comingSoon': 'Próximamente',
     
     // Packages Section
     'packages.badge': 'Elige Tu Experiencia',
