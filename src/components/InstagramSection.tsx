@@ -1,31 +1,9 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { instagramPosts, instagramProfileUrl, instagramHashtag } from '../data/instagram';
 
 const InstagramSection = () => {
   const { t } = useLanguage();
-  const [images, setImages] = useState(instagramPosts);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Future: Add Instagram API fetching here
-  // useEffect(() => {
-  //   const fetchInstagramPosts = async () => {
-  //     setIsLoading(true);
-  //     try {
-  //       const response = await fetch('/api/instagram/posts');
-  //       const data = await response.json();
-  //       setImages(data);
-  //     } catch (error) {
-  //       console.error('Failed to fetch Instagram posts:', error);
-  //       // Fallback to manual images
-  //       setImages(instagramPosts);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
-  //   fetchInstagramPosts();
-  // }, []);
 
   return (
     <section className="py-16 md:py-20 px-4 sm:px-5 bg-gradient-to-b from-sand-light to-white">
@@ -72,24 +50,14 @@ const InstagramSection = () => {
         </motion.div>
 
         {/* Photo Grid */}
-        {isLoading ? (
-          <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-4xl mx-auto">
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square bg-gray-200 animate-pulse rounded-lg sm:rounded-xl"
-              />
-            ))}
-          </div>
-        ) : (
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="grid grid-cols-3 gap-2 sm:gap-3 max-w-4xl mx-auto"
-          >
-            {images.slice(0, 6).map((post, index) => (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="grid grid-cols-3 gap-2 sm:gap-3 max-w-4xl mx-auto"
+        >
+          {instagramPosts.slice(0, 6).map((post, index) => (
               <motion.a
                 key={post.id}
                 href={post.postUrl}
@@ -123,8 +91,7 @@ const InstagramSection = () => {
                 </div>
               </motion.a>
             ))}
-          </motion.div>
-        )}
+        </motion.div>
 
         {/* View More Link */}
         <motion.div
