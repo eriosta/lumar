@@ -44,7 +44,7 @@ const AboutSection = () => {
           {/* Name Equation */}
           <div className="my-8 py-6 px-8 bg-sage/5 border-l-4 border-sage rounded-r-lg">
             <p className="text-3xl md:text-4xl font-bold text-forest text-center tracking-tight">
-              Lugo + Mármol = <span className="text-sunset">Lumar</span>
+              <span className="text-sunset">Lu</span>go + <span className="text-sunset">Már</span>mol = <span className="text-sunset">Lumar</span>
             </p>
           </div>
           
