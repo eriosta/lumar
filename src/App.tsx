@@ -279,7 +279,7 @@ function App() {
           </motion.div>
           
           <p className="text-base leading-relaxed mb-6 md:mb-8">
-            <strong className="text-sand">{t('footer.whatToBring')}</strong> {t('footer.items')}
+            {t('footer.items')}
             <br />
             <em className="text-sm">{t('footer.relax')}</em>
           </p>

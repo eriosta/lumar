@@ -5,41 +5,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-size: 16px; /* Base font size for better mobile readability */
   }
   
   body {
     @apply font-body antialiased;
-    font-size: 1rem; /* 16px minimum */
-    line-height: 1.6; /* Better readability */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Ensure minimum touch target sizes */
-  button, a {
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Better focus indicators for accessibility */
-  *:focus-visible {
-    outline: 2px solid theme('colors.sage');
-    outline-offset: 2px;
-  }
-}
-
-@layer utilities {
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%) skewX(-12deg);
-    }
-    100% {
-      transform: translateX(200%) skewX(-12deg);
-    }
-  }
-  
-  .animate-shimmer {
-    animation: shimmer 3s infinite;
   }
 }
