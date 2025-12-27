@@ -27,6 +27,7 @@ const MobileHeader = () => {
     { id: 'events', label: t('nav.events') },
     { id: 'packages', label: t('nav.packages') },
     { id: 'booking', label: t('nav.book') },
+    { id: 'about', label: t('nav.about') },
   ];
 
   return (
@@ -176,4 +177,5 @@ const MobileHeader = () => {
 };
 
 export default MobileHeader;
+
 

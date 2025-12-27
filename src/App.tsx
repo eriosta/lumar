@@ -8,6 +8,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import MobileHeader from './components/MobileHeader';
 import BottomNav from './components/BottomNav';
 import InstagramSection from './components/InstagramSection';
+import AboutSection from './components/AboutSection';
 import { events, packages, contacts } from './data/events';
 import { useLanguage } from './contexts/LanguageContext';
 import logoImage from './assets/image.png';
@@ -255,6 +256,9 @@ function App() {
           </motion.div>
         </div>
       </section>
+
+      {/* About Section */}
+      <AboutSection />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-12 md:py-16 px-4 sm:px-5 pb-24 md:pb-16">
