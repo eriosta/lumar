@@ -198,7 +198,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-16 px-5">
+      <footer className="bg-gray-900 text-gray-400 py-16 px-4 sm:px-5">
         <div className="max-w-7xl mx-auto text-center">
           {/* Logo */}
           <motion.div
@@ -206,12 +206,12 @@ function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-12 px-4 flex justify-center items-center"
           >
             <img
               src={logoImage}
               alt="Lumar Camping Experience Logo"
-              className="max-w-md mx-auto h-auto opacity-90 hover:opacity-100 transition-opacity"
+              className="w-full max-w-md md:max-w-lg lg:max-w-xl h-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
           </motion.div>
           
