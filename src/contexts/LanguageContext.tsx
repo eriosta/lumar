@@ -93,7 +93,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Full Experience Features
     'packages.full-experience.feature1': 'Camping Equipment Rental PLUS:',
     'packages.full-experience.feature2': 'Full campsite setup by host',
-    'packages.full-experience.feature3': 'Solo Stove fire pit with wood and color flames',
+    'packages.full-experience.feature3': 'Portable fire pit with wood and color flames',
     'packages.full-experience.feature4': 'Grill, charcoal, and utensils',
     'packages.full-experience.feature5': 'Coolers, canopy, extra tables, extra camping chairs',
     'packages.full-experience.feature6': 'Dishwasher station',
@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
     'experience.guided.title': 'Guided Adventures',
     'experience.guided.desc': 'Explore trails with knowledgeable local guides',
     'experience.gear.title': 'Premium Gear',
-    'experience.gear.desc': 'Solo Stove, projectors, games & quality equipment',
+    'experience.gear.desc': 'Portable fire pits, projectors, games & quality equipment',
     
     // Booking Section
     'booking.title': 'Ready for Your Next Adventure?',
@@ -214,7 +214,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Full Experience Features
     'packages.full-experience.feature1': 'Renta de Equipo PLUS:',
     'packages.full-experience.feature2': 'Instalación completa del campamento por el anfitrión',
-    'packages.full-experience.feature3': 'Fogata Solo Stove con leña y llamas de colores',
+    'packages.full-experience.feature3': 'Fogata portátil con leña y llamas de colores',
     'packages.full-experience.feature4': 'Parrilla, carbón y utensilios',
     'packages.full-experience.feature5': 'Hieleras, toldo, mesas adicionales, sillas de camping adicionales',
     'packages.full-experience.feature6': 'Estación de lavado de platos',
@@ -232,7 +232,7 @@ const translations: Record<Language, Record<string, string>> = {
     'experience.guided.title': 'Aventuras Guiadas',
     'experience.guided.desc': 'Explora senderos con guías locales expertos',
     'experience.gear.title': 'Equipo de Primera',
-    'experience.gear.desc': 'Solo Stove, proyectores, juegos y equipo de alta calidad',
+    'experience.gear.desc': 'Fogatas portátiles, proyectores, juegos y equipo de alta calidad',
     
     // Booking Section
     'booking.title': '¿Listo para Tu Próxima Aventura?',

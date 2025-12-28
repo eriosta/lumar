@@ -198,7 +198,7 @@ export const packages: Package[] = [
     features: [
       'Camping Equipment Rental PLUS:',
       'Full campsite setup by host',
-      'Solo Stove fire pit with wood and color flames',
+      'Portable fire pit with wood and color flames',
       'Grill, charcoal, and utensils',
       'Coolers, canopy, extra tables, extra camping chairs',
       'Dishwasher station',
