@@ -1,25 +1,10 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import goliadJanImage from '../assets/goliad-jan.jpg';
 import buescherFebImage from '../assets/buescher-feb.jpg';
 import coloradoBendMarImage from '../assets/colorado-bend-mar.jpg';
 import caddoLakeAprImage from '../assets/caddo-lake-apr.jpg';
 import pedernalesMayImage from '../assets/pedernales-may.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'goliad-jan',
-    parkName: 'Goliad State Park',
-    location: 'Goliad, Texas',
-    month: 'January',
-    dates: '2-4',
-    imageUrl: goliadJanImage,
-    features: ['Mission Espíritu Santo', 'Texas Revolution Site', 'River Paddling Trail', 'CCC Architecture'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
-    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX'
-  },
   {
     id: 'buescher-feb',
     parkName: 'Buescher State Park',
@@ -42,9 +27,9 @@ export const events: CampingEvent[] = [
     dates: '20-22',
     imageUrl: coloradoBendMarImage,
     features: ['70-Foot Waterfall', '250+ Wild Caves', 'Spicewood Springs', '35+ Miles of Trails'],
-    availableSpots: 4,
+    availableSpots: 0,
     totalSpots: 4,
-    isSoldOut: false,
+    isSoldOut: true,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/colorado-bend',
     googleMapsUrl: 'https://maps.google.com/?q=Colorado+Bend+State+Park,+Bend,+TX'
   },
