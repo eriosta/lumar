@@ -7,26 +7,24 @@ interface PackageCardProps {
   index: number;
 }
 
+// Check if device is mobile
+const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+
 const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
   const { t } = useLanguage();
-  
+
   return (
     <div className="relative pt-10">
       {/* Featured Badge - Two-line design */}
       {pkg.isFeatured && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: -10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="absolute top-0 left-1/2 -translate-x-1/2 z-20"
-        >
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
           <div className="bg-sunset text-white px-6 py-3 rounded-full shadow-2xl">
             <div className="flex items-center justify-center gap-3">
               {/* Left star */}
               <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
-              
+
               {/* Two-line text */}
               <div className="flex flex-col items-center leading-tight">
                 <span className="text-xs font-bold uppercase tracking-wider">
@@ -36,27 +34,26 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
                   VALUE
                 </span>
               </div>
-              
+
               {/* Right star */}
               <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-      
+
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1, duration: 0.6 }}
-        whileHover={{ y: -6, scale: 1.02 }}
-        className={`relative rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-300 overflow-visible ${
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ delay: isMobile ? 0 : index * 0.05, duration: isMobile ? 0.3 : 0.5 }}
+        className={`relative rounded-3xl p-6 sm:p-8 md:p-10 transition-shadow duration-300 overflow-visible ${
           pkg.isFeatured
             ? 'bg-gradient-to-br from-forest via-forest to-forest-light text-white border-2 border-sunset shadow-2xl'
             : 'bg-white text-gray-800 border-2 border-gray-200 shadow-lg'
-        } hover:shadow-2xl`}
+        } md:hover:shadow-2xl`}
       >
         {/* Decorative background element for featured */}
         {pkg.isFeatured && (

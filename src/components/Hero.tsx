@@ -82,20 +82,12 @@ const Hero = () => {
         </motion.button>
       </motion.div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.8, y: [0, -10, 0] }}
-        transition={{
-          opacity: { delay: 1.2, duration: 0.8 },
-          y: { delay: 1.2, duration: 2, repeat: Infinity }
-        }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
-      >
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Scroll Indicator - hidden on mobile to avoid animation overhead */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden md:block opacity-80">
+        <svg className="w-8 h-8 text-white animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
         </svg>
-      </motion.div>
+      </div>
     </section>
   );
 };

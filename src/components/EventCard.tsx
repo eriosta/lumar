@@ -8,6 +8,9 @@ interface EventCardProps {
   index: number;
 }
 
+// Check if device is mobile/touch
+const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+
 const EventCard = ({ event, index }: EventCardProps) => {
   const { t } = useLanguage();
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
@@ -66,12 +69,12 @@ const EventCard = ({ event, index }: EventCardProps) => {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: isMobile ? 15 : 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1, duration: 0.6 }}
-        whileHover={{ y: -12 }}
-        className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ delay: isMobile ? 0 : index * 0.05, duration: isMobile ? 0.3 : 0.5 }}
+        whileHover={isMobile ? undefined : { y: -8 }}
+        className="bg-white rounded-2xl overflow-hidden shadow-lg md:hover:shadow-2xl transition-shadow duration-300"
       >
         {/* Image */}
         <div 
@@ -90,14 +93,12 @@ const EventCard = ({ event, index }: EventCardProps) => {
           {!isImageLoaded && (
             <div className="absolute inset-0 bg-gray-200 animate-pulse" />
           )}
-          <motion.img
+          <img
             ref={typeof event.imageUrl === 'string' ? imgRef : undefined}
             data-src={typeof event.imageUrl === 'string' ? event.imageUrl : undefined}
             src={typeof event.imageUrl === 'string' ? undefined : event.imageUrl}
-            whileHover={{ scale: 1.08 }}
-            transition={{ duration: 0.6 }}
             alt={`${event.parkName} landscape`}
-            className="w-full h-full object-cover pointer-events-none"
+            className="w-full h-full object-cover pointer-events-none md:group-hover:scale-105 transition-transform duration-500"
             onLoad={() => setIsImageLoaded(true)}
             loading={typeof event.imageUrl === 'string' ? 'lazy' : 'eager'}
           />

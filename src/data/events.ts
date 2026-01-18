@@ -13,7 +13,7 @@ import garnerSepImage from '../assets/garner-sep.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
 import bastropNovImage from '../assets/bastrop-nov.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
-import brazosBendDecImage from '../assets/brazos-bend-dec.jpg';
+import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
   {
@@ -213,18 +213,18 @@ export const events: CampingEvent[] = [
     googleMapsUrl: 'https://maps.google.com/?q=Lost+Maples+State+Natural+Area,+Vanderpool,+TX'
   },
   {
-    id: 'brazos-bend-dec',
-    parkName: 'Brazos Bend State Park',
-    location: 'Needville, Texas',
+    id: 'huntsville-dec',
+    parkName: 'Huntsville State Park',
+    location: 'Huntsville, Texas',
     month: 'December',
     dates: '4-6',
-    imageUrl: brazosBendDecImage,
-    features: ['37 Miles of Trails', 'George Observatory', 'Wildlife Viewing', 'Alligator Habitat'],
+    imageUrl: huntsvilleDecImage,
+    features: ['210-Acre Lake Raven', '21 Miles of Trails', 'Kayak Rentals', 'Nature Center'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/brazos-bend',
-    googleMapsUrl: 'https://maps.google.com/?q=Brazos+Bend+State+Park,+Needville,+TX'
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/huntsville',
+    googleMapsUrl: 'https://maps.google.com/?q=Huntsville+State+Park,+Huntsville,+TX'
   }
 ];
 
