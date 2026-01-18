@@ -1,8 +1,19 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
 import buescherFebImage from '../assets/buescher-feb.jpg';
 import coloradoBendMarImage from '../assets/colorado-bend-mar.jpg';
+import goliadAprImage from '../assets/goliad-apr.jpg';
 import caddoLakeAprImage from '../assets/caddo-lake-apr.jpg';
-import pedernalesMayImage from '../assets/pedernales-may.jpg';
+import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
+import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
+import purtisCreekJunImage from '../assets/purtis-creek-jun.jpg';
+import galvestonJulImage from '../assets/galveston-jul.jpg';
+import mustangIslandAugImage from '../assets/mustang-island-aug.jpg';
+import guadalupeRiverSepImage from '../assets/guadalupe-river-sep.jpg';
+import garnerSepImage from '../assets/garner-sep.jpg';
+import pedernalesOctImage from '../assets/pedernales-oct.jpg';
+import bastropNovImage from '../assets/bastrop-nov.jpg';
+import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
+import brazosBendDecImage from '../assets/brazos-bend-dec.jpg';
 
 export const events: CampingEvent[] = [
   {
@@ -34,13 +45,27 @@ export const events: CampingEvent[] = [
     googleMapsUrl: 'https://maps.google.com/?q=Colorado+Bend+State+Park,+Bend,+TX'
   },
   {
+    id: 'goliad-apr',
+    parkName: 'Goliad State Park',
+    location: 'Goliad, Texas',
+    month: 'April',
+    dates: '10-12',
+    imageUrl: goliadAprImage,
+    features: ['Mission Espíritu Santo', 'San Antonio River', 'Historic Trails', 'Bird Watching'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
+    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX'
+  },
+  {
     id: 'caddo-lake-apr',
     parkName: 'Caddo Lake State Park',
     location: 'Karnack, Texas',
     month: 'April',
     dates: '24-26',
     imageUrl: caddoLakeAprImage,
-    features: ['Bald Cypress Forest', 'Spanish Moss', 'Bayou Paddling', 'Only Natural Lake'],
+    features: ['Bald Cypress Forest', 'Spanish Moss', 'Bayou Paddling', 'Historic CCC Cabins'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
@@ -48,13 +73,111 @@ export const events: CampingEvent[] = [
     googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX'
   },
   {
-    id: 'pedernales-may',
-    parkName: 'Pedernales Falls State Park',
-    location: 'Johnson City, Texas',
+    id: 'lake-corpus-christi-may',
+    parkName: 'Lake Corpus Christi State Park',
+    location: 'Mathis, Texas',
     month: 'May',
     dates: '15-17',
-    imageUrl: pedernalesMayImage,
-    features: ['50-Foot Cascade', 'River Swimming & Tubing', '40+ Miles of Trails', 'Hill Country Views'],
+    imageUrl: lakeCorpusChristiMayImage,
+    features: ['18,256-Acre Lake', '400-Foot Fishing Pier', '200+ Bird Species', 'Historic CCC Structures'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/lake-corpus-christi',
+    googleMapsUrl: 'https://maps.google.com/?q=Lake+Corpus+Christi+State+Park,+Mathis,+TX'
+  },
+  {
+    id: 'eisenhower-may',
+    parkName: 'Eisenhower State Park',
+    location: 'Denison, Texas',
+    month: 'May',
+    dates: '23-25',
+    imageUrl: eisenhowerMayImage,
+    features: ['Lake Texoma', 'Sandy Swimming Cove', 'Fossil Hunting', 'Bluff Trails'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/eisenhower',
+    googleMapsUrl: 'https://maps.google.com/?q=Eisenhower+State+Park,+Denison,+TX'
+  },
+  {
+    id: 'purtis-creek-jun',
+    parkName: 'Purtis Creek State Park',
+    location: 'Eustace, Texas',
+    month: 'June',
+    dates: '20-22',
+    imageUrl: purtisCreekJunImage,
+    features: ['Bass Fishing Lake', 'Kayak Rentals', '4-Mile Trail', 'Peaceful Forest'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/purtis-creek',
+    googleMapsUrl: 'https://maps.google.com/?q=Purtis+Creek+State+Park,+Eustace,+TX'
+  },
+  {
+    id: 'galveston-jul',
+    parkName: 'Galveston Island State Park',
+    location: 'Galveston, Texas',
+    month: 'July',
+    dates: '3-5',
+    imageUrl: galvestonJulImage,
+    features: ['5 Miles of Beach', 'Paddling Trails', 'Bay & Beach Camping', 'Nature Center'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/galveston-island',
+    googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX'
+  },
+  {
+    id: 'mustang-island-aug',
+    parkName: 'Mustang Island State Park',
+    location: 'Corpus Christi, Texas',
+    month: 'August',
+    dates: '7-9',
+    imageUrl: mustangIslandAugImage,
+    features: ['Gulf Beach Access', '20-Mile Paddling Trail', 'Beach Camping', 'Bird Migration'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/mustang-island',
+    googleMapsUrl: 'https://maps.google.com/?q=Mustang+Island+State+Park,+Corpus+Christi,+TX'
+  },
+  {
+    id: 'guadalupe-river-sep',
+    parkName: 'Guadalupe River State Park',
+    location: 'Spring Branch, Texas',
+    month: 'September',
+    dates: '4-6',
+    imageUrl: guadalupeRiverSepImage,
+    features: ['4 Miles of River', 'Tubing & Swimming', '13 Miles of Trails', 'Honey Creek Tours'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/guadalupe-river',
+    googleMapsUrl: 'https://maps.google.com/?q=Guadalupe+River+State+Park,+Spring+Branch,+TX'
+  },
+  {
+    id: 'garner-sep',
+    parkName: 'Garner State Park',
+    location: 'Concan, Texas',
+    month: 'September',
+    dates: '18-20',
+    imageUrl: garnerSepImage,
+    features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
+    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX'
+  },
+  {
+    id: 'pedernales-oct',
+    parkName: 'Pedernales Falls State Park',
+    location: 'Johnson City, Texas',
+    month: 'October',
+    dates: '23-25',
+    imageUrl: pedernalesOctImage,
+    features: ['Limestone Falls', 'River Swimming', 'Hill Country Trails', 'Equestrian Trails'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
@@ -62,102 +185,46 @@ export const events: CampingEvent[] = [
     googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX'
   },
   {
-    id: 'coming-soon-jun',
-    parkName: 'Coming Soon',
-    location: 'Texas',
-    month: 'June',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
-  },
-  {
-    id: 'coming-soon-jul',
-    parkName: 'Coming Soon',
-    location: 'Texas',
-    month: 'July',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
-  },
-  {
-    id: 'coming-soon-aug',
-    parkName: 'Coming Soon',
-    location: 'Texas',
-    month: 'August',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
-  },
-  {
-    id: 'coming-soon-sep',
-    parkName: 'Coming Soon',
-    location: 'Texas',
-    month: 'September',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
-  },
-  {
-    id: 'coming-soon-oct',
-    parkName: 'Coming Soon',
-    location: 'Texas',
-    month: 'October',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
-  },
-  {
-    id: 'coming-soon-nov',
-    parkName: 'Coming Soon',
-    location: 'Texas',
+    id: 'bastrop-nov',
+    parkName: 'Bastrop State Park',
+    location: 'Bastrop, Texas',
     month: 'November',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
+    dates: '13-15',
+    imageUrl: bastropNovImage,
+    features: ['Lost Pines Forest', 'Historic CCC Cabins', 'Scenic Park Road', '7 Miles of Trails'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
+    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX'
   },
   {
-    id: 'coming-soon-dec',
-    parkName: 'Coming Soon',
-    location: 'Texas',
-    month: 'December',
-    dates: '',
-    imageUrl: 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=800&h=600&fit=crop',
-    features: ['Details Coming Soon'],
+    id: 'lost-maples-nov',
+    parkName: 'Lost Maples State Natural Area',
+    location: 'Vanderpool, Texas',
+    month: 'November',
+    dates: '27-29',
+    imageUrl: lostMaplesNovImage,
+    features: ['Fall Foliage', 'Bigtooth Maples', '10+ Miles of Trails', 'Canyon Views'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: '',
-    googleMapsUrl: ''
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/lost-maples',
+    googleMapsUrl: 'https://maps.google.com/?q=Lost+Maples+State+Natural+Area,+Vanderpool,+TX'
+  },
+  {
+    id: 'brazos-bend-dec',
+    parkName: 'Brazos Bend State Park',
+    location: 'Needville, Texas',
+    month: 'December',
+    dates: '4-6',
+    imageUrl: brazosBendDecImage,
+    features: ['37 Miles of Trails', 'George Observatory', 'Wildlife Viewing', 'Alligator Habitat'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/brazos-bend',
+    googleMapsUrl: 'https://maps.google.com/?q=Brazos+Bend+State+Park,+Needville,+TX'
   }
 ];
 
