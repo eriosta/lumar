@@ -94,7 +94,7 @@ export const events: CampingEvent[] = [
     dates: '23-25',
     imageUrl: eisenhowerMayImage,
     features: ['Lake Texoma', 'Sandy Swimming Cove', 'Fossil Hunting', 'Bluff Trails'],
-    availableSpots: 2,
+    availableSpots: 3,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/eisenhower',
