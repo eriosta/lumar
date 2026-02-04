@@ -19,6 +19,7 @@ const EventCard = ({ event, index }: EventCardProps) => {
     event.id, event.coordinates, event.month, event.dates
   );
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [isWeatherOpen, setIsWeatherOpen] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -148,48 +149,9 @@ const EventCard = ({ event, index }: EventCardProps) => {
 
       {/* Details */}
       <div className="p-5 sm:p-6 md:p-8">
-        <div className="mb-3">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-800 leading-tight">
-              {event.parkName}
-            </h3>
-          </div>
-          {(event.parkWebsite || event.googleMapsUrl) && (
-            <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
-              {event.parkWebsite && (
-                <a
-                  href={event.parkWebsite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sage hover:text-forest transition-all duration-200 text-sm font-medium flex items-center gap-1.5 hover:gap-2 group min-h-[44px] px-3 py-2 rounded-lg hover:bg-sage/10 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
-                  onClick={(e) => e.stopPropagation()}
-                  aria-label={`Visit ${event.parkName} official website`}
-                >
-                  <span>{t('events.visitPark')}</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              )}
-              {event.googleMapsUrl && (
-                <a
-                  href={event.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sage hover:text-forest transition-all duration-200 text-sm font-medium flex items-center gap-1.5 hover:gap-2 group min-h-[44px] px-3 py-2 rounded-lg hover:bg-sage/10 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
-                  onClick={(e) => e.stopPropagation()}
-                  aria-label={`View ${event.parkName} on Google Maps`}
-                >
-                  <span>{t('events.viewMap')}</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </a>
-              )}
-            </div>
-          )}
-        </div>
+        <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-800 leading-tight mb-3">
+          {event.parkName}
+        </h3>
         <div className="flex items-center gap-2 text-gray-600 mb-4">
           <svg className="w-5 h-5 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -210,11 +172,8 @@ const EventCard = ({ event, index }: EventCardProps) => {
           ))}
         </div>
 
-        {/* Weather */}
-        <WeatherForecast weather={weather} isLoading={weatherLoading} error={weatherError} />
-
         {/* Spots Status */}
-        <div className="flex items-center gap-2.5 pt-3 border-t border-gray-100">
+        <div className="flex items-center gap-2.5 pb-3 mb-3 border-b border-gray-100">
           <div className="flex items-center gap-1.5" aria-label={`${event.availableSpots} of ${event.totalSpots} spots available`}>
             {[...Array(event.totalSpots)].map((_, idx) => (
               <div
@@ -232,6 +191,57 @@ const EventCard = ({ event, index }: EventCardProps) => {
               : `${event.availableSpots} ${event.availableSpots !== 1 ? t('events.spotsLeft') : t('events.spotLeft')}`}
           </span>
         </div>
+
+        {/* Links & Weather Toggle */}
+        <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
+          {event.parkWebsite && (
+            <a
+              href={event.parkWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sage hover:text-forest transition-all duration-200 text-sm font-medium flex items-center gap-1.5 hover:gap-2 group min-h-[44px] px-3 py-2 rounded-lg hover:bg-sage/10 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
+              onClick={(e) => e.stopPropagation()}
+              aria-label={`Visit ${event.parkName} official website`}
+            >
+              <span>{t('events.visitPark')}</span>
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          )}
+          {event.googleMapsUrl && (
+            <a
+              href={event.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sage hover:text-forest transition-all duration-200 text-sm font-medium flex items-center gap-1.5 hover:gap-2 group min-h-[44px] px-3 py-2 rounded-lg hover:bg-sage/10 focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2"
+              onClick={(e) => e.stopPropagation()}
+              aria-label={`View ${event.parkName} on Google Maps`}
+            >
+              <span>{t('events.viewMap')}</span>
+              <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </a>
+          )}
+          <button
+            onClick={() => setIsWeatherOpen(!isWeatherOpen)}
+            className={`min-h-[44px] px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sage focus:ring-offset-2 ${
+              isWeatherOpen ? 'bg-sage/15 text-forest' : 'text-sage hover:text-forest hover:bg-sage/10'
+            }`}
+            aria-label={`${isWeatherOpen ? 'Hide' : 'Show'} weather for ${event.parkName}`}
+          >
+            {t('weather.viewWeather')}
+          </button>
+        </div>
+
+        {/* Weather */}
+        {isWeatherOpen && (
+          <div className="mt-3">
+            <WeatherForecast weather={weather} isLoading={weatherLoading} error={weatherError} />
+          </div>
+        )}
       </div>
     </motion.div>
 

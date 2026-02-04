@@ -9,7 +9,7 @@ interface WeatherForecastProps {
 }
 
 function WeatherIcon({ icon }: { icon: string }) {
-  const size = 'w-7 h-7 sm:w-8 sm:h-8';
+  const size = 'w-5 h-5 sm:w-6 sm:h-6';
 
   switch (icon) {
     case 'sun':
@@ -105,14 +105,13 @@ const WeatherForecast = ({ weather, isLoading, error }: WeatherForecastProps) =>
 
   if (isLoading) {
     return (
-      <div className="bg-sand-light/50 rounded-xl p-3 sm:p-4 mb-4">
-        <div className="h-4 w-28 bg-gray-200 animate-pulse rounded mb-3" />
-        <div className="grid grid-cols-3 gap-2 sm:gap-3">
+      <div className="bg-sand-light/50 rounded-lg p-2.5 sm:p-3 mb-4">
+        <div className="h-3 w-24 bg-gray-200 animate-pulse rounded mb-2" />
+        <div className="grid grid-cols-3 gap-2">
           {[0, 1, 2].map((i) => (
-            <div key={i} className="flex flex-col items-center gap-1.5">
+            <div key={i} className="flex flex-col items-center gap-1">
               <div className="h-3 w-10 bg-gray-200 animate-pulse rounded" />
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-gray-200 animate-pulse rounded-full" />
-              <div className="h-4 w-14 bg-gray-200 animate-pulse rounded" />
+              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-200 animate-pulse rounded-full" />
               <div className="h-3 w-12 bg-gray-200 animate-pulse rounded" />
             </div>
           ))}
@@ -126,10 +125,10 @@ const WeatherForecast = ({ weather, isLoading, error }: WeatherForecastProps) =>
   const cols = weather.days.length <= 2 ? 'grid-cols-2' : 'grid-cols-3';
 
   return (
-    <div className="bg-sand-light/50 rounded-xl p-3 sm:p-4 mb-4">
-      <div className="mb-2.5">
+    <div className="bg-sand-light/50 rounded-lg p-2.5 sm:p-3 mb-4">
+      <div className="flex items-center gap-2 mb-1.5">
         <span
-          className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wide uppercase ${
+          className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wide uppercase ${
             weather.type === 'forecast'
               ? 'bg-river/10 text-river'
               : 'bg-sage/10 text-sage'
@@ -138,25 +137,21 @@ const WeatherForecast = ({ weather, isLoading, error }: WeatherForecastProps) =>
           {weather.type === 'forecast' ? t('weather.forecast') : t('weather.typicalWeather')}
         </span>
       </div>
-      <div className={`grid ${cols} gap-2 sm:gap-3`}>
+      <div className={`grid ${cols} gap-1.5 sm:gap-2`}>
         {weather.days.map((day) => {
           const desc = getWeatherDescription(day.weatherCode);
           return (
-            <div key={day.date} className="flex flex-col items-center gap-0.5 sm:gap-1">
-              <div className="text-[10px] sm:text-xs text-gray-500 font-medium">
-                {formatDayName(day.date)}
-              </div>
-              <div className="text-[10px] sm:text-xs text-gray-400">
-                {formatDayNum(day.date)}
+            <div key={day.date} className="flex flex-col items-center">
+              <div className="text-[10px] text-gray-500 font-medium">
+                {formatDayName(day.date)} {formatDayNum(day.date)}
               </div>
               <WeatherIcon icon={desc.icon} />
-              <div className="text-sm sm:text-base font-bold text-forest">
-                {day.tempMax}°
-                <span className="text-gray-400 font-normal text-xs sm:text-sm"> {day.tempMin}°</span>
+              <div className="text-xs sm:text-sm font-bold text-forest leading-tight">
+                {day.tempMax}°<span className="text-gray-400 font-normal"> {day.tempMin}°</span>
               </div>
               {day.precipitationProbability > 0 && (
-                <div className="text-[10px] sm:text-xs text-river flex items-center gap-0.5">
-                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                <div className="text-[10px] text-river flex items-center gap-0.5">
+                  <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C12 2 5 12 5 16a7 7 0 0014 0C19 12 12 2 12 2z" opacity={0.6} />
                   </svg>
                   {day.precipitationProbability}%

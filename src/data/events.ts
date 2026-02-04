@@ -174,7 +174,7 @@ export const events: CampingEvent[] = [
     dates: '18-20',
     imageUrl: garnerSepImage,
     features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
-    availableSpots: 4,
+    availableSpots: 2,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',

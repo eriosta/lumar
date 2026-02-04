@@ -76,19 +76,10 @@ const translations: Record<Language, Record<string, string>> = {
     'events.comingSoon': 'Coming Soon',
 
     // Weather
+    'weather.weather': 'Weather',
+    'weather.viewWeather': 'View Weather',
     'weather.forecast': 'Forecast',
     'weather.typicalWeather': 'Typical Weather',
-    'weather.clear': 'Clear',
-    'weather.partlyCloudy': 'Partly Cloudy',
-    'weather.overcast': 'Overcast',
-    'weather.fog': 'Foggy',
-    'weather.drizzle': 'Drizzle',
-    'weather.rainLight': 'Light Rain',
-    'weather.rainModerate': 'Rain',
-    'weather.rainHeavy': 'Heavy Rain',
-    'weather.snow': 'Snow',
-    'weather.showers': 'Showers',
-    'weather.thunderstorm': 'Thunderstorm',
 
     // Packages Section
     'packages.badge': 'Choose Your Experience',
@@ -212,19 +203,10 @@ const translations: Record<Language, Record<string, string>> = {
     'events.comingSoon': 'Próximamente',
 
     // Weather
+    'weather.weather': 'Clima',
+    'weather.viewWeather': 'Ver Clima',
     'weather.forecast': 'Pronóstico',
     'weather.typicalWeather': 'Clima Típico',
-    'weather.clear': 'Despejado',
-    'weather.partlyCloudy': 'Parcialmente Nublado',
-    'weather.overcast': 'Nublado',
-    'weather.fog': 'Niebla',
-    'weather.drizzle': 'Llovizna',
-    'weather.rainLight': 'Lluvia Ligera',
-    'weather.rainModerate': 'Lluvia',
-    'weather.rainHeavy': 'Lluvia Fuerte',
-    'weather.snow': 'Nieve',
-    'weather.showers': 'Chubascos',
-    'weather.thunderstorm': 'Tormenta',
 
     // Packages Section
     'packages.badge': 'Elige Tu Experiencia',
