@@ -54,7 +54,7 @@ export const events: CampingEvent[] = [
     dates: '10-12',
     imageUrl: goliadAprImage,
     features: ['Mission Espíritu Santo', 'San Antonio River', 'Historic Trails', 'Bird Watching'],
-    availableSpots: 4,
+    availableSpots: 3,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
