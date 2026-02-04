@@ -74,7 +74,22 @@ const translations: Record<Language, Record<string, string>> = {
     'events.limitedSpots': 'Limited Spots',
     'events.soldOut': 'Sold Out',
     'events.comingSoon': 'Coming Soon',
-    
+
+    // Weather
+    'weather.forecast': 'Forecast',
+    'weather.typicalWeather': 'Typical Weather',
+    'weather.clear': 'Clear',
+    'weather.partlyCloudy': 'Partly Cloudy',
+    'weather.overcast': 'Overcast',
+    'weather.fog': 'Foggy',
+    'weather.drizzle': 'Drizzle',
+    'weather.rainLight': 'Light Rain',
+    'weather.rainModerate': 'Rain',
+    'weather.rainHeavy': 'Heavy Rain',
+    'weather.snow': 'Snow',
+    'weather.showers': 'Showers',
+    'weather.thunderstorm': 'Thunderstorm',
+
     // Packages Section
     'packages.badge': 'Choose Your Experience',
     'packages.title': 'Camping Packages',
@@ -195,7 +210,22 @@ const translations: Record<Language, Record<string, string>> = {
     'events.limitedSpots': 'Cupos Limitados',
     'events.soldOut': 'Agotado',
     'events.comingSoon': 'Próximamente',
-    
+
+    // Weather
+    'weather.forecast': 'Pronóstico',
+    'weather.typicalWeather': 'Clima Típico',
+    'weather.clear': 'Despejado',
+    'weather.partlyCloudy': 'Parcialmente Nublado',
+    'weather.overcast': 'Nublado',
+    'weather.fog': 'Niebla',
+    'weather.drizzle': 'Llovizna',
+    'weather.rainLight': 'Lluvia Ligera',
+    'weather.rainModerate': 'Lluvia',
+    'weather.rainHeavy': 'Lluvia Fuerte',
+    'weather.snow': 'Nieve',
+    'weather.showers': 'Chubascos',
+    'weather.thunderstorm': 'Tormenta',
+
     // Packages Section
     'packages.badge': 'Elige Tu Experiencia',
     'packages.title': 'Paquetes de Acampada',

@@ -11,6 +11,7 @@ export interface CampingEvent {
   isSoldOut: boolean;
   parkWebsite: string;
   googleMapsUrl: string;
+  coordinates: { latitude: number; longitude: number };
 }
 
 export interface Package {

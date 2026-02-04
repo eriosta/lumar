@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import { CampingEvent } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useWeather } from '../hooks/useWeather';
+import WeatherForecast from './WeatherForecast';
 
 interface EventCardProps {
   event: CampingEvent;
@@ -13,6 +15,9 @@ const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width:
 
 const EventCard = ({ event, index }: EventCardProps) => {
   const { t } = useLanguage();
+  const { weather, isLoading: weatherLoading, error: weatherError } = useWeather(
+    event.id, event.coordinates, event.month, event.dates
+  );
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -204,6 +209,9 @@ const EventCard = ({ event, index }: EventCardProps) => {
             </span>
           ))}
         </div>
+
+        {/* Weather */}
+        <WeatherForecast weather={weather} isLoading={weatherLoading} error={weatherError} />
 
         {/* Spots Status */}
         <div className="flex items-center gap-2.5 pt-3 border-t border-gray-100">

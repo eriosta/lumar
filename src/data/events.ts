@@ -28,7 +28,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/buescher',
-    googleMapsUrl: 'https://maps.google.com/?q=Buescher+State+Park,+Smithville,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Buescher+State+Park,+Smithville,+TX',
+    coordinates: { latitude: 30.04, longitude: -97.16 }
   },
   {
     id: 'colorado-bend-mar',
@@ -42,7 +43,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: true,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/colorado-bend',
-    googleMapsUrl: 'https://maps.google.com/?q=Colorado+Bend+State+Park,+Bend,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Colorado+Bend+State+Park,+Bend,+TX',
+    coordinates: { latitude: 31.02, longitude: -98.44 }
   },
   {
     id: 'goliad-apr',
@@ -56,7 +58,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
-    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX',
+    coordinates: { latitude: 28.66, longitude: -97.39 }
   },
   {
     id: 'caddo-lake-apr',
@@ -70,7 +73,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/caddo-lake',
-    googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX',
+    coordinates: { latitude: 32.68, longitude: -94.17 }
   },
   {
     id: 'lake-corpus-christi-may',
@@ -84,7 +88,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/lake-corpus-christi',
-    googleMapsUrl: 'https://maps.google.com/?q=Lake+Corpus+Christi+State+Park,+Mathis,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Lake+Corpus+Christi+State+Park,+Mathis,+TX',
+    coordinates: { latitude: 28.07, longitude: -97.87 }
   },
   {
     id: 'eisenhower-may',
@@ -98,7 +103,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/eisenhower',
-    googleMapsUrl: 'https://maps.google.com/?q=Eisenhower+State+Park,+Denison,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Eisenhower+State+Park,+Denison,+TX',
+    coordinates: { latitude: 33.82, longitude: -96.62 }
   },
   {
     id: 'purtis-creek-jun',
@@ -112,7 +118,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/purtis-creek',
-    googleMapsUrl: 'https://maps.google.com/?q=Purtis+Creek+State+Park,+Eustace,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Purtis+Creek+State+Park,+Eustace,+TX',
+    coordinates: { latitude: 32.35, longitude: -96.00 }
   },
   {
     id: 'galveston-jul',
@@ -126,7 +133,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/galveston-island',
-    googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX',
+    coordinates: { latitude: 29.20, longitude: -94.95 }
   },
   {
     id: 'mustang-island-aug',
@@ -140,7 +148,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/mustang-island',
-    googleMapsUrl: 'https://maps.google.com/?q=Mustang+Island+State+Park,+Corpus+Christi,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Mustang+Island+State+Park,+Corpus+Christi,+TX',
+    coordinates: { latitude: 27.68, longitude: -97.16 }
   },
   {
     id: 'guadalupe-river-sep',
@@ -154,7 +163,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/guadalupe-river',
-    googleMapsUrl: 'https://maps.google.com/?q=Guadalupe+River+State+Park,+Spring+Branch,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Guadalupe+River+State+Park,+Spring+Branch,+TX',
+    coordinates: { latitude: 29.86, longitude: -98.50 }
   },
   {
     id: 'garner-sep',
@@ -168,7 +178,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
-    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
+    coordinates: { latitude: 29.59, longitude: -99.74 }
   },
   {
     id: 'pedernales-oct',
@@ -182,7 +193,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/pedernales-falls',
-    googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX',
+    coordinates: { latitude: 30.31, longitude: -98.26 }
   },
   {
     id: 'bastrop-nov',
@@ -196,7 +208,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
-    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX',
+    coordinates: { latitude: 30.11, longitude: -97.29 }
   },
   {
     id: 'lost-maples-nov',
@@ -210,7 +223,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/lost-maples',
-    googleMapsUrl: 'https://maps.google.com/?q=Lost+Maples+State+Natural+Area,+Vanderpool,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Lost+Maples+State+Natural+Area,+Vanderpool,+TX',
+    coordinates: { latitude: 29.81, longitude: -99.57 }
   },
   {
     id: 'huntsville-dec',
@@ -224,7 +238,8 @@ export const events: CampingEvent[] = [
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/huntsville',
-    googleMapsUrl: 'https://maps.google.com/?q=Huntsville+State+Park,+Huntsville,+TX'
+    googleMapsUrl: 'https://maps.google.com/?q=Huntsville+State+Park,+Huntsville,+TX',
+    coordinates: { latitude: 30.63, longitude: -95.53 }
   }
 ];
 
