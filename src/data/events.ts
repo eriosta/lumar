@@ -5,7 +5,7 @@ import goliadAprImage from '../assets/goliad-apr.jpg';
 import caddoLakeAprImage from '../assets/caddo-lake-apr.jpg';
 import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
-import purtisCreekJunImage from '../assets/purtis-creek-jun.jpg';
+import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import galvestonJulImage from '../assets/galveston-jul.jpg';
 import mustangIslandAugImage from '../assets/mustang-island-aug.jpg';
 import guadalupeRiverSepImage from '../assets/guadalupe-river-sep.jpg';
@@ -107,19 +107,19 @@ export const events: CampingEvent[] = [
     coordinates: { latitude: 33.82, longitude: -96.62 }
   },
   {
-    id: 'purtis-creek-jun',
-    parkName: 'Purtis Creek State Park',
-    location: 'Eustace, Texas',
+    id: 'cleburne-jun',
+    parkName: 'Cleburne State Park',
+    location: 'Cleburne, Texas',
     month: 'June',
-    dates: '20-22',
-    imageUrl: purtisCreekJunImage,
-    features: ['Bass Fishing Lake', 'Kayak Rentals', '4-Mile Trail', 'Peaceful Forest'],
+    dates: '19-21',
+    imageUrl: cleburneJunImage,
+    features: ['Cedar Lake Swimming', 'Limestone Bluffs', '8+ Miles of Trails', 'Wildlife Viewing'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/purtis-creek',
-    googleMapsUrl: 'https://maps.google.com/?q=Purtis+Creek+State+Park,+Eustace,+TX',
-    coordinates: { latitude: 32.35, longitude: -96.00 }
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/cleburne',
+    googleMapsUrl: 'https://maps.google.com/?q=Cleburne+State+Park,+Cleburne,+TX',
+    coordinates: { latitude: 32.26, longitude: -97.56 }
   },
   {
     id: 'galveston-jul',
@@ -156,7 +156,7 @@ export const events: CampingEvent[] = [
     parkName: 'Guadalupe River State Park',
     location: 'Spring Branch, Texas',
     month: 'September',
-    dates: '4-6',
+    dates: '5-7',
     imageUrl: guadalupeRiverSepImage,
     features: ['4 Miles of River', 'Tubing & Swimming', '13 Miles of Trails', 'Honey Creek Tours'],
     availableSpots: 4,
