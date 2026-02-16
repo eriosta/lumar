@@ -24,9 +24,9 @@ export const events: CampingEvent[] = [
     dates: '20-22',
     imageUrl: buescherFebImage,
     features: ['Lost Pines Ecosystem', '30-Acre Lake', 'Scenic Park Road', 'CCC History'],
-    availableSpots: 4,
+    availableSpots: 0,
     totalSpots: 4,
-    isSoldOut: false,
+    isSoldOut: true,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/buescher',
     googleMapsUrl: 'https://maps.google.com/?q=Buescher+State+Park,+Smithville,+TX',
     coordinates: { latitude: 30.04, longitude: -97.16 }
