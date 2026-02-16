@@ -18,6 +18,7 @@ export interface Package {
   id: string;
   name: string;
   price: number;
+  originalPrice?: number;
   duration: string;
   features: string[];
   isFeatured?: boolean;

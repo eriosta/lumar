@@ -71,23 +71,37 @@ const PackageCard = ({ package: pkg, index }: PackageCardProps) => {
               {t('packages.duration')}
             </div>
           </div>
-          <div className={`text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none flex-shrink-0 ${pkg.isFeatured ? 'text-sand' : 'text-forest'}`}>
-            ${pkg.price}
+          <div className="flex-shrink-0 text-right">
+            {pkg.originalPrice && (
+              <div className={`text-sm line-through ${pkg.isFeatured ? 'text-white/50' : 'text-gray-400'}`}>
+                ${pkg.originalPrice}
+              </div>
+            )}
+            <div className={`text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none ${pkg.isFeatured ? 'text-sand' : 'text-forest'}`}>
+              ${pkg.price}
+            </div>
           </div>
         </div>
 
         {/* Per Night Pricing */}
-        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg ${
-          pkg.isFeatured 
-            ? 'bg-white/10 backdrop-blur-sm' 
-            : 'bg-sand-light'
-        }`}>
-          <span className={`text-sm font-bold ${pkg.isFeatured ? 'text-white' : 'text-forest'}`}>
-            ${Math.round(pkg.price / 2)}
-          </span>
-          <span className={`text-xs ${pkg.isFeatured ? 'text-white/80' : 'text-gray-600'}`}>
-            {t('packages.perNight')}
-          </span>
+        <div className="flex items-center gap-3 flex-wrap">
+          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg ${
+            pkg.isFeatured
+              ? 'bg-white/10 backdrop-blur-sm'
+              : 'bg-sand-light'
+          }`}>
+            <span className={`text-sm font-bold ${pkg.isFeatured ? 'text-white' : 'text-forest'}`}>
+              ${Math.round(pkg.price / 2)}
+            </span>
+            <span className={`text-xs ${pkg.isFeatured ? 'text-white/80' : 'text-gray-600'}`}>
+              {t('packages.perNight')}
+            </span>
+          </div>
+          {pkg.originalPrice && (
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-500 text-white text-xs font-bold uppercase tracking-wide">
+              <span>Save ${pkg.originalPrice - pkg.price}</span>
+            </div>
+          )}
         </div>
       </div>
 

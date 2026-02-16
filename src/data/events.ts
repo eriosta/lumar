@@ -260,7 +260,8 @@ export const packages: Package[] = [
   {
     id: 'full-experience',
     name: 'Full Camping Experience',
-    price: 285,
+    price: 250,
+    originalPrice: 285,
     duration: '2 Nights / 3 Days',
     features: [
       'Camping Equipment Rental PLUS:',
@@ -272,8 +273,7 @@ export const packages: Package[] = [
       'Outdoor games (Cornhole, Bocce Balls/Bolas Criollas, etc.)',
       'Movie projector and speakers',
       'Guided hiking trip',
-      'State Park entrance and use fees',
-      'Breakfast included!'
+      'State Park entrance and use fees'
     ],
     isFeatured: true
   }
