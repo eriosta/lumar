@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Hero from './components/Hero';
 import EventCard from './components/EventCard';
 import CalendarView from './components/CalendarView';
+import EventFilters from './components/EventFilters';
 import PackageCard from './components/PackageCard';
 import WhatsAppButton from './components/WhatsAppButton';
 import MobileHeader from './components/MobileHeader';
@@ -19,6 +20,21 @@ const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width:
 function App() {
   const { t } = useLanguage();
   const [viewMode, setViewMode] = useState<'schedule' | 'calendar'>('schedule');
+  const [activeMonths, setActiveMonths] = useState<string[]>([]);
+  const [activeCampsiteTypes, setActiveCampsiteTypes] = useState<string[]>([]);
+  const [activeAvailability, setActiveAvailability] = useState<string[]>([]);
+
+  const filteredEvents = events.filter(event => {
+    if (activeMonths.length > 0 && !activeMonths.includes(event.month)) return false;
+    if (activeCampsiteTypes.length > 0 && !activeCampsiteTypes.some(type => event.campsiteType.toLowerCase().includes(type))) return false;
+    if (activeAvailability.length > 0) {
+      const matches = activeAvailability.some(a =>
+        a === 'available' ? !event.isSoldOut : event.isSoldOut
+      );
+      if (!matches) return false;
+    }
+    return true;
+  });
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -72,6 +88,19 @@ function App() {
           </div>
         </motion.div>
 
+        {/* Filters */}
+        <EventFilters
+          events={events}
+          activeMonths={activeMonths}
+          activeCampsiteTypes={activeCampsiteTypes}
+          activeAvailability={activeAvailability}
+          onMonthsChange={setActiveMonths}
+          onCampsiteTypesChange={setActiveCampsiteTypes}
+          onAvailabilityChange={setActiveAvailability}
+          filteredCount={filteredEvents.length}
+          totalCount={events.length}
+        />
+
         {/* View Content */}
         <AnimatePresence mode="wait">
           {viewMode === 'schedule' && (
@@ -83,7 +112,7 @@ function App() {
               transition={{ duration: 0.3 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12"
             >
-              {events.map((event, index) => (
+              {filteredEvents.map((event, index) => (
                 <EventCard key={event.id} event={event} index={index} />
               ))}
             </motion.div>
@@ -98,10 +127,16 @@ function App() {
               transition={{ duration: 0.3 }}
               className="mt-8 md:mt-12"
             >
-              <CalendarView events={events} />
+              <CalendarView events={filteredEvents} />
             </motion.div>
           )}
         </AnimatePresence>
+
+        {filteredEvents.length === 0 && (activeMonths.length > 0 || activeCampsiteTypes.length > 0 || activeAvailability.length > 0) && (
+          <div className="text-center py-16">
+            <p className="text-gray-400 text-lg">{t('filters.noResults')}</p>
+          </div>
+        )}
       </section>
 
       {/* Packages Section */}

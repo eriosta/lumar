@@ -75,6 +75,22 @@ const translations: Record<Language, Record<string, string>> = {
     'events.soldOut': 'Sold Out',
     'events.comingSoon': 'Coming Soon',
 
+    // Filters
+    'filters.filter': 'Filter',
+    'filters.month': 'Month',
+    'filters.campsite': 'Campsite',
+    'filters.status': 'Status',
+    'filters.available': 'Available',
+    'filters.soldOut': 'Sold Out',
+    'filters.fullHookups': 'Full Hookups',
+    'filters.waterElectric': 'Water & Electric',
+    'filters.primitive': 'Primitive',
+    'filters.clearAll': 'Clear All',
+    'filters.showing': 'Showing',
+    'filters.of': 'of',
+    'filters.trips': 'trips',
+    'filters.noResults': 'No trips match your filters',
+
     // Weather
     'weather.weather': 'Weather',
     'weather.viewWeather': 'View Weather',
@@ -201,6 +217,22 @@ const translations: Record<Language, Record<string, string>> = {
     'events.limitedSpots': 'Cupos Limitados',
     'events.soldOut': 'Agotado',
     'events.comingSoon': 'Próximamente',
+
+    // Filters
+    'filters.filter': 'Filtrar',
+    'filters.month': 'Mes',
+    'filters.campsite': 'Sitio',
+    'filters.status': 'Estado',
+    'filters.available': 'Disponible',
+    'filters.soldOut': 'Agotado',
+    'filters.fullHookups': 'Conexión Completa',
+    'filters.waterElectric': 'Agua y Eléctrica',
+    'filters.primitive': 'Primitivo',
+    'filters.clearAll': 'Limpiar',
+    'filters.showing': 'Mostrando',
+    'filters.of': 'de',
+    'filters.trips': 'viajes',
+    'filters.noResults': 'Ningún viaje coincide con tus filtros',
 
     // Weather
     'weather.weather': 'Clima',

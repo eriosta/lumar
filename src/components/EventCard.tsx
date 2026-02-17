@@ -160,6 +160,25 @@ const EventCard = ({ event, index }: EventCardProps) => {
           <span className="text-sm sm:text-base">{event.location}</span>
         </div>
 
+        {/* Campsite Type */}
+        {event.campsiteType && (
+          <div className="flex items-start gap-2 mb-4">
+            <svg className="w-5 h-5 text-sage flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" />
+            </svg>
+            <div className="flex flex-wrap gap-1.5">
+              {event.campsiteType.split(/,\s*and\s+|,\s+|\s+and\s+/).filter(Boolean).map((type, idx) => (
+                <span
+                  key={idx}
+                  className="px-2.5 py-1 bg-sage/10 border border-sage/20 rounded-full text-xs text-sage font-medium"
+                >
+                  {type.trim()}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Features */}
         <div className="flex flex-wrap gap-2 mb-4">
           {event.features.map((feature, idx) => (

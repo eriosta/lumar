@@ -12,6 +12,7 @@ export interface CampingEvent {
   parkWebsite: string;
   googleMapsUrl: string;
   coordinates: { latitude: number; longitude: number };
+  campsiteType: string;
 }
 
 export interface Package {
