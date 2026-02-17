@@ -30,7 +30,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/buescher',
     googleMapsUrl: 'https://maps.google.com/?q=Buescher+State+Park,+Smithville,+TX',
     coordinates: { latitude: 30.04, longitude: -97.16 },
-    campsiteType: 'Water & Electric, Water-only, and Primitive walk-in sites'
+    campsiteType: 'Campsite with Water'
   },
   {
     id: 'colorado-bend-mar',
@@ -46,7 +46,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/colorado-bend',
     googleMapsUrl: 'https://maps.google.com/?q=Colorado+Bend+State+Park,+Bend,+TX',
     coordinates: { latitude: 31.02, longitude: -98.44 },
-    campsiteType: 'Primitive (no hookups)'
+    campsiteType: 'Campsite Primitive'
   },
   {
     id: 'goliad-apr',
@@ -62,7 +62,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
     googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX',
     coordinates: { latitude: 28.66, longitude: -97.39 },
-    campsiteType: 'Full hookups (Water/Electric/Sewer), Water & Electric, and Water-only walk-in sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'caddo-lake-apr',
@@ -78,7 +78,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/caddo-lake',
     googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX',
     coordinates: { latitude: 32.68, longitude: -94.17 },
-    campsiteType: 'Full hookups (Water/Electric/Sewer) and Water-only sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'lake-corpus-christi-may',
@@ -94,7 +94,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/lake-corpus-christi',
     googleMapsUrl: 'https://maps.google.com/?q=Lake+Corpus+Christi+State+Park,+Mathis,+TX',
     coordinates: { latitude: 28.07, longitude: -97.87 },
-    campsiteType: 'Full hookups (Water/Electric/Sewer), Water & Electric, and Water-only sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'eisenhower-may',
@@ -110,7 +110,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/eisenhower',
     googleMapsUrl: 'https://maps.google.com/?q=Eisenhower+State+Park,+Denison,+TX',
     coordinates: { latitude: 33.82, longitude: -96.62 },
-    campsiteType: 'Water & Electric hookups (tent sites to RV pull-throughs)'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'cleburne-jun',
@@ -126,7 +126,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/cleburne',
     googleMapsUrl: 'https://maps.google.com/?q=Cleburne+State+Park,+Cleburne,+TX',
     coordinates: { latitude: 32.26, longitude: -97.56 },
-    campsiteType: 'Water & Electric (some with sewer hookups)'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'galveston-jul',
@@ -142,7 +142,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/galveston-island',
     googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX',
     coordinates: { latitude: 29.20, longitude: -94.95 },
-    campsiteType: 'Water & Electric (bay side) and Primitive beach camping'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'mustang-island-aug',
@@ -158,7 +158,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/mustang-island',
     googleMapsUrl: 'https://maps.google.com/?q=Mustang+Island+State+Park,+Corpus+Christi,+TX',
     coordinates: { latitude: 27.68, longitude: -97.16 },
-    campsiteType: 'Water & Electric and Primitive drive-up beach sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'guadalupe-river-sep',
@@ -174,7 +174,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/guadalupe-river',
     googleMapsUrl: 'https://maps.google.com/?q=Guadalupe+River+State+Park,+Spring+Branch,+TX',
     coordinates: { latitude: 29.86, longitude: -98.50 },
-    campsiteType: 'Water & Electric and Walk-in tent sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'garner-sep',
@@ -190,7 +190,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
     googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
     coordinates: { latitude: 29.59, longitude: -99.74 },
-    campsiteType: 'Water & Electric, Water-only, and Primitive tent sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'pedernales-oct',
@@ -206,7 +206,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/pedernales-falls',
     googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX',
     coordinates: { latitude: 30.31, longitude: -98.26 },
-    campsiteType: 'Water & Electric and Primitive backpack camping'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'bastrop-nov',
@@ -222,7 +222,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
     googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX',
     coordinates: { latitude: 30.11, longitude: -97.29 },
-    campsiteType: 'Water & Electric and Walk-in tent sites'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'lost-maples-nov',
@@ -238,7 +238,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/lost-maples',
     googleMapsUrl: 'https://maps.google.com/?q=Lost+Maples+State+Natural+Area,+Vanderpool,+TX',
     coordinates: { latitude: 29.81, longitude: -99.57 },
-    campsiteType: 'Water & Electric and Primitive backpack camping'
+    campsiteType: 'Campsite with Water and Electricity'
   },
   {
     id: 'huntsville-dec',
@@ -254,7 +254,7 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/huntsville',
     googleMapsUrl: 'https://maps.google.com/?q=Huntsville+State+Park,+Huntsville,+TX',
     coordinates: { latitude: 30.63, longitude: -95.53 },
-    campsiteType: 'Full hookups (Water/Electric/Sewer) and Water & Electric sites'
+    campsiteType: 'Campsite with Water and Electricity'
   }
 ];
 

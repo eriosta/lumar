@@ -26,7 +26,7 @@ function App() {
 
   const filteredEvents = events.filter(event => {
     if (activeMonths.length > 0 && !activeMonths.includes(event.month)) return false;
-    if (activeCampsiteTypes.length > 0 && !activeCampsiteTypes.some(type => event.campsiteType.toLowerCase().includes(type))) return false;
+    if (activeCampsiteTypes.length > 0 && !activeCampsiteTypes.some(type => event.campsiteType.toLowerCase() === type)) return false;
     if (activeAvailability.length > 0) {
       const matches = activeAvailability.some(a =>
         a === 'available' ? !event.isSoldOut : event.isSoldOut

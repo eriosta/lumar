@@ -15,9 +15,9 @@ interface EventFiltersProps {
 }
 
 const CAMPSITE_CATEGORIES = [
-  { key: 'fullHookups', match: 'full hookups' },
-  { key: 'waterElectric', match: 'water & electric' },
-  { key: 'primitive', match: 'primitive' },
+  { key: 'waterElectric', match: 'campsite with water and electricity' },
+  { key: 'waterOnly', match: 'campsite with water' },
+  { key: 'primitive', match: 'campsite primitive' },
 ] as const;
 
 const EventFilters = ({
