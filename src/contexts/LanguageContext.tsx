@@ -55,6 +55,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.book': 'Book Now',
     'nav.home': 'Home',
     'nav.about': 'About',
+    'nav.gallery': 'Gallery',
     
     // Hero
     'hero.subtitle': 'Experience the magic of Texas State Parks with fully equipped glamping, expert setup, and unforgettable outdoor adventures.',
@@ -134,7 +135,12 @@ const translations: Record<Language, Record<string, string>> = {
     'experience.guided.desc': 'Explore trails with knowledgeable local guides',
     'experience.gear.title': 'Premium Gear',
     'experience.gear.desc': 'Portable fire pits, projectors, games & quality equipment',
-    
+
+    // Previous Trips
+    'previousTrips.badge': 'Where We\'ve Been',
+    'previousTrips.title': 'Previous Adventures',
+    'previousTrips.description': 'Relive the memories from our past camping trips across Texas State Parks',
+
     // Booking Section
     'booking.title': 'Ready for Your Next Adventure?',
     'booking.description': 'Message us on WhatsApp to reserve your spot and start planning your perfect camping getaway',
@@ -198,6 +204,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.book': 'Reservar',
     'nav.home': 'Inicio',
     'nav.about': 'Nosotros',
+    'nav.gallery': 'Galería',
     
     // Hero
     'hero.subtitle': 'Descubre la magia de los Parques Estatales de Texas con glamping totalmente equipado, instalación profesional y aventuras inolvidables bajo las estrellas.',
@@ -277,7 +284,12 @@ const translations: Record<Language, Record<string, string>> = {
     'experience.guided.desc': 'Explora senderos con guías locales expertos',
     'experience.gear.title': 'Equipo de Primera',
     'experience.gear.desc': 'Fogatas portátiles, proyectores, juegos y equipo de alta calidad',
-    
+
+    // Previous Trips
+    'previousTrips.badge': 'Dónde Hemos Estado',
+    'previousTrips.title': 'Aventuras Anteriores',
+    'previousTrips.description': 'Revive los recuerdos de nuestros viajes de acampada por los Parques Estatales de Texas',
+
     // Booking Section
     'booking.title': '¿Listo para Tu Próxima Aventura?',
     'booking.description': 'Envíanos un mensaje por WhatsApp para reservar tu espacio y empezar a planear tu escapada perfecta de acampada',

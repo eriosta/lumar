@@ -9,6 +9,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import MobileHeader from './components/MobileHeader';
 import BottomNav from './components/BottomNav';
 import InstagramSection from './components/InstagramSection';
+import PreviousTrips from './components/PreviousTrips';
 import AboutSection from './components/AboutSection';
 import { events, packages, contacts } from './data/events';
 import { useLanguage } from './contexts/LanguageContext';
@@ -239,6 +240,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Previous Trips Gallery */}
+      <PreviousTrips />
 
       {/* Instagram Section */}
       <InstagramSection />

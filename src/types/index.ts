@@ -25,6 +25,16 @@ export interface Package {
   isFeatured?: boolean;
 }
 
+export interface PreviousTrip {
+  id: string;
+  parkName: string;
+  location: string;
+  dates: string;
+  month: string;
+  year: number;
+  images: string[];
+}
+
 export interface WhatsAppContact {
   name: string;
   phone: string;

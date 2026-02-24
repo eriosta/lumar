@@ -26,6 +26,7 @@ const MobileHeader = () => {
   const navItems = [
     { id: 'events', label: t('nav.events') },
     { id: 'packages', label: t('nav.packages') },
+    { id: 'previous-trips', label: t('nav.gallery') },
     { id: 'booking', label: t('nav.book') },
     { id: 'about', label: t('nav.about') },
   ];

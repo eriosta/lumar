@@ -1,5 +1,4 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import buescherFebImage from '../assets/buescher-feb.jpg';
 import coloradoBendMarImage from '../assets/colorado-bend-mar.jpg';
 import goliadAprImage from '../assets/goliad-apr.jpg';
 import caddoLakeAprImage from '../assets/caddo-lake-apr.jpg';
@@ -16,22 +15,6 @@ import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'buescher-feb',
-    parkName: 'Buescher State Park',
-    location: 'Smithville, Texas',
-    month: 'February',
-    dates: '20-22',
-    imageUrl: buescherFebImage,
-    features: ['Lost Pines Ecosystem', '30-Acre Lake', 'Scenic Park Road', 'CCC History'],
-    availableSpots: 0,
-    totalSpots: 4,
-    isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/buescher',
-    googleMapsUrl: 'https://maps.google.com/?q=Buescher+State+Park,+Smithville,+TX',
-    coordinates: { latitude: 30.04, longitude: -97.16 },
-    campsiteType: 'Campsite with Water'
-  },
   {
     id: 'colorado-bend-mar',
     parkName: 'Colorado Bend State Park',
