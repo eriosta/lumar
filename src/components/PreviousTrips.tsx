@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { previousTrips } from '../data/previousTrips';
@@ -8,8 +8,6 @@ const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width:
 const PreviousTrips = () => {
   const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
-  const touchStart = useRef(0);
-  const touchEnd = useRef(0);
 
   // Flatten all trip images into slides
   const slides = useMemo(() =>
@@ -27,8 +25,13 @@ const PreviousTrips = () => {
 
   const total = slides.length;
 
-  const prev = () => setCurrent(i => (i === 0 ? total - 1 : i - 1));
-  const next = () => setCurrent(i => (i === total - 1 ? 0 : i + 1));
+  useEffect(() => {
+    if (total <= 1) return;
+    const timer = setInterval(() => {
+      setCurrent(i => (i === total - 1 ? 0 : i + 1));
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [total]);
 
   if (total === 0) return null;
 
@@ -63,21 +66,7 @@ const PreviousTrips = () => {
           className="relative max-w-5xl mx-auto"
         >
           {/* Track */}
-          <div
-            className="overflow-hidden rounded-2xl touch-pan-y"
-            onTouchStart={(e) => {
-              touchStart.current = e.targetTouches[0].clientX;
-              touchEnd.current = e.targetTouches[0].clientX;
-            }}
-            onTouchMove={(e) => {
-              touchEnd.current = e.targetTouches[0].clientX;
-            }}
-            onTouchEnd={() => {
-              const diff = touchStart.current - touchEnd.current;
-              if (diff > 50) next();
-              else if (diff < -50) prev();
-            }}
-          >
+          <div className="overflow-hidden rounded-2xl">
             <motion.div
               className="flex"
               animate={{ x: `-${current * 100}%` }}
@@ -126,41 +115,15 @@ const PreviousTrips = () => {
             </motion.div>
           </div>
 
-          {/* Arrow buttons */}
-          {total > 1 && (
-            <>
-              <button
-                onClick={prev}
-                className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 items-center justify-center text-forest hover:bg-forest hover:text-white transition-colors"
-                aria-label="Previous photo"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={next}
-                className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 items-center justify-center text-forest hover:bg-forest hover:text-white transition-colors"
-                aria-label="Next photo"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </>
-          )}
-
-          {/* Dot indicators */}
+          {/* Progress dots */}
           {total > 1 && (
             <div className="flex justify-center gap-1.5 mt-6">
               {slides.map((_, idx) => (
-                <button
+                <div
                   key={idx}
-                  onClick={() => setCurrent(idx)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    idx === current ? 'bg-forest w-6' : 'bg-gray-300 hover:bg-gray-400 w-2'
+                    idx === current ? 'bg-forest w-6' : 'bg-gray-300 w-2'
                   }`}
-                  aria-label={`Go to photo ${idx + 1}`}
                 />
               ))}
             </div>
