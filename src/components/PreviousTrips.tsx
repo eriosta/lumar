@@ -8,7 +8,8 @@ const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width:
 const PreviousTrips = () => {
   const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
-  const dragRef = useRef(0);
+  const touchStart = useRef(0);
+  const touchEnd = useRef(0);
 
   // Flatten all trip images into slides
   const slides = useMemo(() =>
@@ -62,22 +63,25 @@ const PreviousTrips = () => {
           className="relative max-w-5xl mx-auto"
         >
           {/* Track */}
-          <div className="overflow-hidden rounded-2xl">
+          <div
+            className="overflow-hidden rounded-2xl touch-pan-y"
+            onTouchStart={(e) => {
+              touchStart.current = e.targetTouches[0].clientX;
+              touchEnd.current = e.targetTouches[0].clientX;
+            }}
+            onTouchMove={(e) => {
+              touchEnd.current = e.targetTouches[0].clientX;
+            }}
+            onTouchEnd={() => {
+              const diff = touchStart.current - touchEnd.current;
+              if (diff > 50) next();
+              else if (diff < -50) prev();
+            }}
+          >
             <motion.div
               className="flex"
               animate={{ x: `-${current * 100}%` }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragStart={(_, info) => {
-                dragRef.current = info.point.x;
-              }}
-              onDragEnd={(_, info) => {
-                const diff = info.point.x - dragRef.current;
-                if (diff < -50) next();
-                else if (diff > 50) prev();
-              }}
             >
               {slides.map((slide) => (
                 <div
