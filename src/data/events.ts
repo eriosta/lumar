@@ -6,11 +6,9 @@ import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import galvestonJulImage from '../assets/galveston-jul.jpg';
-import mustangIslandAugImage from '../assets/mustang-island-aug.jpg';
 import guadalupeRiverSepImage from '../assets/guadalupe-river-sep.jpg';
 import garnerSepImage from '../assets/garner-sep.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
-import bastropNovImage from '../assets/bastrop-nov.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
@@ -87,9 +85,9 @@ export const events: CampingEvent[] = [
     dates: '23-25',
     imageUrl: eisenhowerMayImage,
     features: ['Lake Texoma', 'Sandy Swimming Cove', 'Fossil Hunting', 'Bluff Trails'],
-    availableSpots: 1,
+    availableSpots: 0,
     totalSpots: 4,
-    isSoldOut: false,
+    isSoldOut: true,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/eisenhower',
     googleMapsUrl: 'https://maps.google.com/?q=Eisenhower+State+Park,+Denison,+TX',
     coordinates: { latitude: 33.82, longitude: -96.62 },
@@ -103,9 +101,9 @@ export const events: CampingEvent[] = [
     dates: '19-21',
     imageUrl: cleburneJunImage,
     features: ['Cedar Lake Swimming', 'Limestone Bluffs', '8+ Miles of Trails', 'Wildlife Viewing'],
-    availableSpots: 4,
+    availableSpots: 0,
     totalSpots: 4,
-    isSoldOut: false,
+    isSoldOut: true,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/cleburne',
     googleMapsUrl: 'https://maps.google.com/?q=Cleburne+State+Park,+Cleburne,+TX',
     coordinates: { latitude: 32.26, longitude: -97.56 },
@@ -116,7 +114,7 @@ export const events: CampingEvent[] = [
     parkName: 'Galveston Island State Park',
     location: 'Galveston, Texas',
     month: 'July',
-    dates: '3-5',
+    dates: '31 - Aug 2',
     imageUrl: galvestonJulImage,
     features: ['5 Miles of Beach', 'Paddling Trails', 'Bay & Beach Camping', 'Nature Center'],
     availableSpots: 4,
@@ -125,22 +123,6 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/galveston-island',
     googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX',
     coordinates: { latitude: 29.20, longitude: -94.95 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
-  {
-    id: 'mustang-island-aug',
-    parkName: 'Mustang Island State Park',
-    location: 'Corpus Christi, Texas',
-    month: 'August',
-    dates: '7-9',
-    imageUrl: mustangIslandAugImage,
-    features: ['Gulf Beach Access', '20-Mile Paddling Trail', 'Beach Camping', 'Bird Migration'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/mustang-island',
-    googleMapsUrl: 'https://maps.google.com/?q=Mustang+Island+State+Park,+Corpus+Christi,+TX',
-    coordinates: { latitude: 27.68, longitude: -97.16 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
@@ -189,22 +171,6 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/pedernales-falls',
     googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX',
     coordinates: { latitude: 30.31, longitude: -98.26 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
-  {
-    id: 'bastrop-nov',
-    parkName: 'Bastrop State Park',
-    location: 'Bastrop, Texas',
-    month: 'November',
-    dates: '13-15',
-    imageUrl: bastropNovImage,
-    features: ['Lost Pines Forest', 'Historic CCC Cabins', 'Scenic Park Road', '7 Miles of Trails'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
-    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX',
-    coordinates: { latitude: 30.11, longitude: -97.29 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
