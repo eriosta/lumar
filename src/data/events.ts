@@ -1,50 +1,15 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import coloradoBendMarImage from '../assets/colorado-bend-mar.jpg';
-import goliadAprImage from '../assets/goliad-apr.jpg';
 import caddoLakeAprImage from '../assets/caddo-lake-apr.jpg';
 import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import galvestonJulImage from '../assets/galveston-jul.jpg';
-import guadalupeRiverSepImage from '../assets/guadalupe-river-sep.jpg';
 import garnerSepImage from '../assets/garner-sep.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'colorado-bend-mar',
-    parkName: 'Colorado Bend State Park',
-    location: 'Bend, Texas',
-    month: 'March',
-    dates: '20-22',
-    imageUrl: coloradoBendMarImage,
-    features: ['70-Foot Waterfall', '250+ Wild Caves', 'Spicewood Springs', '35+ Miles of Trails'],
-    availableSpots: 0,
-    totalSpots: 4,
-    isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/colorado-bend',
-    googleMapsUrl: 'https://maps.google.com/?q=Colorado+Bend+State+Park,+Bend,+TX',
-    coordinates: { latitude: 31.02, longitude: -98.44 },
-    campsiteType: 'Campsite Primitive'
-  },
-  {
-    id: 'goliad-apr',
-    parkName: 'Goliad State Park',
-    location: 'Goliad, Texas',
-    month: 'April',
-    dates: '10-12',
-    imageUrl: goliadAprImage,
-    features: ['Mission Espíritu Santo', 'San Antonio River', 'Historic Trails', 'Bird Watching'],
-    availableSpots: 3,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
-    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX',
-    coordinates: { latitude: 28.66, longitude: -97.39 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'caddo-lake-apr',
     parkName: 'Caddo Lake State Park',
@@ -53,7 +18,7 @@ export const events: CampingEvent[] = [
     dates: '24-26',
     imageUrl: caddoLakeAprImage,
     features: ['Bald Cypress Forest', 'Spanish Moss', 'Bayou Paddling', 'Historic CCC Cabins'],
-    availableSpots: 4,
+    availableSpots: 2,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/caddo-lake',
@@ -113,32 +78,16 @@ export const events: CampingEvent[] = [
     id: 'galveston-jul',
     parkName: 'Galveston Island State Park',
     location: 'Galveston, Texas',
-    month: 'July',
-    dates: '31 - Aug 2',
+    month: 'August',
+    dates: '7-9',
     imageUrl: galvestonJulImage,
     features: ['5 Miles of Beach', 'Paddling Trails', 'Bay & Beach Camping', 'Nature Center'],
-    availableSpots: 4,
+    availableSpots: 2,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/galveston-island',
     googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX',
     coordinates: { latitude: 29.20, longitude: -94.95 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
-  {
-    id: 'guadalupe-river-sep',
-    parkName: 'Guadalupe River State Park',
-    location: 'Spring Branch, Texas',
-    month: 'September',
-    dates: '5-7',
-    imageUrl: guadalupeRiverSepImage,
-    features: ['4 Miles of River', 'Tubing & Swimming', '13 Miles of Trails', 'Honey Creek Tours'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/guadalupe-river',
-    googleMapsUrl: 'https://maps.google.com/?q=Guadalupe+River+State+Park,+Spring+Branch,+TX',
-    coordinates: { latitude: 29.86, longitude: -98.50 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
