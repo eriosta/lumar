@@ -9,9 +9,9 @@ const PreviousTrips = () => {
   const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
 
-  // Flatten all trip images into slides
-  const slides = useMemo(() =>
-    previousTrips.flatMap(trip =>
+  // Flatten all trip images into slides, then shuffle for random order
+  const slides = useMemo(() => {
+    const all = previousTrips.flatMap(trip =>
       trip.images.map((img, idx) => ({
         image: img,
         parkName: trip.parkName,
@@ -20,8 +20,14 @@ const PreviousTrips = () => {
         year: trip.year,
         key: `${trip.id}-${idx}`,
       }))
-    ), []
-  );
+    );
+    // Fisher-Yates shuffle
+    for (let i = all.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [all[i], all[j]] = [all[j], all[i]];
+    }
+    return all;
+  }, []);
 
   const total = slides.length;
 
