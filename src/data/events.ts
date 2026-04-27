@@ -3,7 +3,6 @@ import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import galvestonJulImage from '../assets/galveston-jul.jpg';
-import garnerImage from '../assets/garner-sep.jpg';
 import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
 import bastropNovImage from '../assets/bastrop-nov.jpg';
@@ -11,22 +10,6 @@ import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'garner-apr',
-    parkName: 'Garner State Park',
-    location: 'Concan, Texas',
-    month: 'April',
-    dates: '24-26',
-    imageUrl: garnerImage,
-    features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
-    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
-    coordinates: { latitude: 29.59, longitude: -99.74 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'lake-corpus-christi-may',
     parkName: 'Lake Corpus Christi State Park',

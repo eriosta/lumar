@@ -1,4 +1,23 @@
 import { PreviousTrip } from '../types';
+import garner1 from '../assets/trips/garner-apr-2026/IMG_3575.jpeg';
+import garner2 from '../assets/trips/garner-apr-2026/IMG_3579.jpeg';
+import garner3 from '../assets/trips/garner-apr-2026/IMG_3584.jpeg';
+import garner4 from '../assets/trips/garner-apr-2026/IMG_3587.jpeg';
+import garner5 from '../assets/trips/garner-apr-2026/IMG_3588.jpeg';
+import garner6 from '../assets/trips/garner-apr-2026/IMG_3592.jpeg';
+import garner7 from '../assets/trips/garner-apr-2026/IMG_3593.jpeg';
+import garner8 from '../assets/trips/garner-apr-2026/IMG_3601.jpeg';
+import garner9 from '../assets/trips/garner-apr-2026/IMG_3602.jpeg';
+import garner10 from '../assets/trips/garner-apr-2026/IMG_3604.jpeg';
+import garner11 from '../assets/trips/garner-apr-2026/IMG_3609.JPG';
+import garner12 from '../assets/trips/garner-apr-2026/IMG_3610.JPG';
+import garner13 from '../assets/trips/garner-apr-2026/IMG_3611.JPG';
+import garner14 from '../assets/trips/garner-apr-2026/IMG_3619.JPG';
+import garner15 from '../assets/trips/garner-apr-2026/IMG_3623.JPG';
+import garner16 from '../assets/trips/garner-apr-2026/IMG_3627.JPG';
+import garner17 from '../assets/trips/garner-apr-2026/IMG_3633.jpeg';
+import garner18 from '../assets/trips/garner-apr-2026/IMG_3651.JPG';
+import garner19 from '../assets/trips/garner-apr-2026/IMG_3654.JPG';
 import colorado1 from '../assets/trips/colorado-bend-mar-2026/IMG_2679.JPG';
 import colorado2 from '../assets/trips/colorado-bend-mar-2026/IMG_2686.JPG';
 import colorado3 from '../assets/trips/colorado-bend-mar-2026/IMG_2699.JPG';
@@ -25,6 +44,15 @@ import buescher11 from '../assets/trips/buescher-feb-2026/IMG_1623.JPG';
 import buescher12 from '../assets/trips/buescher-feb-2026/IMG_1627.JPG';
 
 export const previousTrips: PreviousTrip[] = [
+  {
+    id: 'garner-apr-2026',
+    parkName: 'Garner State Park',
+    location: 'Concan, Texas',
+    dates: 'Apr 24-26',
+    month: 'April',
+    year: 2026,
+    images: [garner1, garner2, garner3, garner4, garner5, garner6, garner7, garner8, garner9, garner10, garner11, garner12, garner13, garner14, garner15, garner16, garner17, garner18, garner19],
+  },
   {
     id: 'colorado-bend-mar-2026',
     parkName: 'Colorado Bend State Park',
