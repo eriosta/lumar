@@ -1,29 +1,30 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import caddoLakeAprImage from '../assets/caddo-lake-apr.jpg';
 import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import galvestonJulImage from '../assets/galveston-jul.jpg';
-import garnerSepImage from '../assets/garner-sep.jpg';
+import garnerImage from '../assets/garner-sep.jpg';
+import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
+import bastropNovImage from '../assets/bastrop-nov.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
   {
-    id: 'caddo-lake-apr',
-    parkName: 'Caddo Lake State Park',
-    location: 'Karnack, Texas',
+    id: 'garner-apr',
+    parkName: 'Garner State Park',
+    location: 'Concan, Texas',
     month: 'April',
     dates: '24-26',
-    imageUrl: caddoLakeAprImage,
-    features: ['Bald Cypress Forest', 'Spanish Moss', 'Bayou Paddling', 'Historic CCC Cabins'],
-    availableSpots: 2,
+    imageUrl: garnerImage,
+    features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
+    availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/caddo-lake',
-    googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX',
-    coordinates: { latitude: 32.68, longitude: -94.17 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
+    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
+    coordinates: { latitude: 29.59, longitude: -99.74 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
@@ -91,19 +92,19 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'garner-sep',
-    parkName: 'Garner State Park',
-    location: 'Concan, Texas',
-    month: 'September',
-    dates: '18-20',
-    imageUrl: garnerSepImage,
-    features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
-    availableSpots: 2,
+    id: 'inks-lake-oct',
+    parkName: 'Inks Lake State Park',
+    location: 'Burnet, Texas',
+    month: 'October',
+    dates: '9-11',
+    imageUrl: inksLakeOctImage,
+    features: ['Clear Blue Lake', 'Devil\'s Waterhole', 'Granite Outcrops', '9 Miles of Trails'],
+    availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
-    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
-    coordinates: { latitude: 29.59, longitude: -99.74 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/inks-lake',
+    googleMapsUrl: 'https://maps.google.com/?q=Inks+Lake+State+Park,+Burnet,+TX',
+    coordinates: { latitude: 30.74, longitude: -98.38 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
@@ -120,6 +121,22 @@ export const events: CampingEvent[] = [
     parkWebsite: 'https://tpwd.texas.gov/state-parks/pedernales-falls',
     googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX',
     coordinates: { latitude: 30.31, longitude: -98.26 },
+    campsiteType: 'Campsite with Water and Electricity'
+  },
+  {
+    id: 'bastrop-nov',
+    parkName: 'Bastrop State Park',
+    location: 'Bastrop, Texas',
+    month: 'November',
+    dates: '7-9',
+    imageUrl: bastropNovImage,
+    features: ['Lost Pines Forest', 'Historic CCC Cabins', 'Scenic Park Road', '7 Miles of Trails'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
+    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX',
+    coordinates: { latitude: 30.11, longitude: -97.29 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
@@ -143,7 +160,7 @@ export const events: CampingEvent[] = [
     parkName: 'Huntsville State Park',
     location: 'Huntsville, Texas',
     month: 'December',
-    dates: '4-6',
+    dates: '5-7',
     imageUrl: huntsvilleDecImage,
     features: ['210-Acre Lake Raven', '21 Miles of Trails', 'Kayak Rentals', 'Nature Center'],
     availableSpots: 4,
