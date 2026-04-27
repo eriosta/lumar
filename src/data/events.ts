@@ -59,19 +59,19 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'galveston-jul',
-    parkName: 'Galveston Island State Park',
-    location: 'Galveston, Texas',
+    id: 'tbd-jul',
+    parkName: 'Park TBD',
+    location: 'Texas',
     month: 'July',
     dates: '24-26',
     imageUrl: galvestonJulImage,
-    features: ['5 Miles of Beach', 'Paddling Trails', 'Bay & Beach Camping', 'Nature Center'],
-    availableSpots: 2,
+    features: ['Park To Be Announced', 'Stay Tuned', 'Adventure Awaits', 'Details Coming Soon'],
+    availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/galveston-island',
-    googleMapsUrl: 'https://maps.google.com/?q=Galveston+Island+State+Park,+Galveston,+TX',
-    coordinates: { latitude: 29.20, longitude: -94.95 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks',
+    googleMapsUrl: 'https://maps.google.com/?q=Texas+State+Parks',
+    coordinates: { latitude: 31.0, longitude: -99.0 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
