@@ -2,7 +2,8 @@ import { CampingEvent, Package, WhatsAppContact } from '../types';
 import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
-import galvestonJulImage from '../assets/galveston-jul.jpg';
+import mckinneyFallsJulImage from '../assets/mckinney-falls-jul.jpg';
+import garnerSepImage from '../assets/garner-sep.jpg';
 import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
 import bastropNovImage from '../assets/bastrop-nov.jpg';
@@ -59,19 +60,35 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'tbd-jul',
-    parkName: 'Park TBD',
-    location: 'Texas',
+    id: 'mckinney-falls-jul',
+    parkName: 'McKinney Falls State Park',
+    location: 'Austin, Texas',
     month: 'July',
     dates: '24-26',
-    imageUrl: galvestonJulImage,
-    features: ['Park To Be Announced', 'Stay Tuned', 'Adventure Awaits', 'Details Coming Soon'],
+    imageUrl: mckinneyFallsJulImage,
+    features: ['Upper & Lower Falls', 'Onion Creek', '9 Miles of Trails', 'Historic Smith Visitor Center'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks',
-    googleMapsUrl: 'https://maps.google.com/?q=Texas+State+Parks',
-    coordinates: { latitude: 31.0, longitude: -99.0 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/mckinney-falls',
+    googleMapsUrl: 'https://maps.google.com/?q=McKinney+Falls+State+Park,+Austin,+TX',
+    coordinates: { latitude: 30.18, longitude: -97.72 },
+    campsiteType: 'Campsite with Water and Electricity'
+  },
+  {
+    id: 'garner-sep',
+    parkName: 'Garner State Park',
+    location: 'Concan, Texas',
+    month: 'September',
+    dates: '18-20',
+    imageUrl: garnerSepImage,
+    features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
+    availableSpots: 4,
+    totalSpots: 4,
+    isSoldOut: false,
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
+    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
+    coordinates: { latitude: 29.59, longitude: -99.74 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
