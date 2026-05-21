@@ -1,5 +1,4 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import lakeCorpusChristiMayImage from '../assets/lake-corpus-christi-may.jpg';
 import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import mckinneyFallsJulImage from '../assets/mckinney-falls-jul.jpg';
@@ -11,22 +10,6 @@ import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'lake-corpus-christi-may',
-    parkName: 'Lake Corpus Christi State Park',
-    location: 'Mathis, Texas',
-    month: 'May',
-    dates: '15-17',
-    imageUrl: lakeCorpusChristiMayImage,
-    features: ['18,256-Acre Lake', '400-Foot Fishing Pier', '200+ Bird Species', 'Historic CCC Structures'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/lake-corpus-christi',
-    googleMapsUrl: 'https://maps.google.com/?q=Lake+Corpus+Christi+State+Park,+Mathis,+TX',
-    coordinates: { latitude: 28.07, longitude: -97.87 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'eisenhower-may',
     parkName: 'Eisenhower State Park',
