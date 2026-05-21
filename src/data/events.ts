@@ -3,7 +3,7 @@ import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import mckinneyFallsJulImage from '../assets/mckinney-falls-jul.jpg';
 import garnerSepImage from '../assets/garner-sep.jpg';
-import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
+import goliadOctImage from '../assets/goliad-apr.jpg';
 import pedernalesOctImage from '../assets/pedernales-oct.jpg';
 import bastropNovImage from '../assets/bastrop-nov.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
@@ -75,19 +75,19 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'inks-lake-oct',
-    parkName: 'Inks Lake State Park',
-    location: 'Burnet, Texas',
+    id: 'goliad-oct',
+    parkName: 'Goliad State Park',
+    location: 'Goliad, Texas',
     month: 'October',
     dates: '9-11',
-    imageUrl: inksLakeOctImage,
-    features: ['Clear Blue Lake', 'Devil\'s Waterhole', 'Granite Outcrops', '9 Miles of Trails'],
+    imageUrl: goliadOctImage,
+    features: ['Mission Espíritu Santo', 'San Antonio River', 'Historic Trails', 'Bird Watching'],
     availableSpots: 0,
     totalSpots: 4,
     isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/inks-lake',
-    googleMapsUrl: 'https://maps.google.com/?q=Inks+Lake+State+Park,+Burnet,+TX',
-    coordinates: { latitude: 30.74, longitude: -98.38 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
+    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX',
+    coordinates: { latitude: 28.66, longitude: -97.39 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
