@@ -19,7 +19,7 @@ import logoImage from './assets/image.png';
 const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
 
 function App() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [viewMode, setViewMode] = useState<'schedule' | 'calendar'>('schedule');
   const [activeMonths, setActiveMonths] = useState<string[]>([]);
   const [activeCampsiteTypes, setActiveCampsiteTypes] = useState<string[]>([]);
@@ -87,6 +87,15 @@ function App() {
               {t('events.viewToggle.calendar')}
             </button>
           </div>
+
+          <p className="text-xs text-gray-500 mt-4">
+            {t('events.lastUpdated')}{' '}
+            {new Date(__LAST_UPDATED__).toLocaleDateString(language === 'es' ? 'es-MX' : 'en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
         </motion.div>
 
         {/* Filters */}

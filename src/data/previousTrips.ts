@@ -1,4 +1,15 @@
 import { PreviousTrip } from '../types';
+import corpus29_1 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_4868.jpg';
+import corpus29_2 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_4877.jpg';
+import corpus29_3 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_4897.jpg';
+import corpus29_4 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_4915.jpg';
+import corpus29_5 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_4947.jpg';
+import corpus29_6 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_4972.jpg';
+import corpus29_7 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_5003.jpg';
+import corpus29_8 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_5008.jpg';
+import corpus29_9 from '../assets/trips/lake-corpus-christi-may29-2026/IMG_5010.jpg';
+import corpus29_10 from '../assets/trips/lake-corpus-christi-may29-2026/53324696-2366-4195-BCBC-83737C9C9137.jpg';
+import corpus29_11 from '../assets/trips/lake-corpus-christi-may29-2026/9CAE9F8D-16C6-4F30-8B28-E7C3565540D7.jpg';
 import corpus1 from '../assets/trips/lake-corpus-christi-may-2026/0B7FF4B6-B5FE-4136-BA78-41D05A18AB27.jpeg';
 import corpus2 from '../assets/trips/lake-corpus-christi-may-2026/17321AB8-277D-4E8C-BEF5-E38CF82DA6EE.jpeg';
 import corpus3 from '../assets/trips/lake-corpus-christi-may-2026/24FE01D2-3AC9-4CA8-BBDF-3E0672E84B60.jpeg';
@@ -58,6 +69,15 @@ import buescher11 from '../assets/trips/buescher-feb-2026/IMG_1623.JPG';
 import buescher12 from '../assets/trips/buescher-feb-2026/IMG_1627.JPG';
 
 export const previousTrips: PreviousTrip[] = [
+  {
+    id: 'lake-corpus-christi-may29-2026',
+    parkName: 'Lake Corpus Christi State Park',
+    location: 'Mathis, Texas',
+    dates: 'May 29-31',
+    month: 'May',
+    year: 2026,
+    images: [corpus29_1, corpus29_2, corpus29_3, corpus29_4, corpus29_5, corpus29_6, corpus29_7, corpus29_8, corpus29_9, corpus29_10, corpus29_11],
+  },
   {
     id: 'lake-corpus-christi-may-2026',
     parkName: 'Lake Corpus Christi State Park',

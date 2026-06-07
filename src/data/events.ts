@@ -1,31 +1,14 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import eisenhowerMayImage from '../assets/eisenhower-may.jpg';
 import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import mckinneyFallsJulImage from '../assets/mckinney-falls-jul.jpg';
 import garnerSepImage from '../assets/garner-sep.jpg';
 import goliadOctImage from '../assets/goliad-apr.jpg';
-import pedernalesOctImage from '../assets/pedernales-oct.jpg';
-import bastropNovImage from '../assets/bastrop-nov.jpg';
+import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
+import caddoLakeNovImage from '../assets/caddo-lake-apr.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
 import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'eisenhower-may',
-    parkName: 'Eisenhower State Park',
-    location: 'Denison, Texas',
-    month: 'May',
-    dates: '29-31',
-    imageUrl: eisenhowerMayImage,
-    features: ['Lake Texoma', 'Sandy Swimming Cove', 'Fossil Hunting', 'Bluff Trails'],
-    availableSpots: 0,
-    totalSpots: 4,
-    isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/eisenhower',
-    googleMapsUrl: 'https://maps.google.com/?q=Eisenhower+State+Park,+Denison,+TX',
-    coordinates: { latitude: 33.82, longitude: -96.62 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'cleburne-jun',
     parkName: 'Cleburne State Park',
@@ -91,35 +74,35 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'pedernales-oct',
-    parkName: 'Pedernales Falls State Park',
-    location: 'Johnson City, Texas',
+    id: 'inks-lake-oct',
+    parkName: 'Inks Lake State Park',
+    location: 'Burnet, Texas',
     month: 'October',
     dates: '23-25',
-    imageUrl: pedernalesOctImage,
-    features: ['Limestone Falls', 'River Swimming', 'Hill Country Trails', 'Equestrian Trails'],
+    imageUrl: inksLakeOctImage,
+    features: ['Clear Blue Lake', 'Devil\'s Waterhole', 'Granite Outcrops', '9 Miles of Trails'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/pedernales-falls',
-    googleMapsUrl: 'https://maps.google.com/?q=Pedernales+Falls+State+Park,+Johnson+City,+TX',
-    coordinates: { latitude: 30.31, longitude: -98.26 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/inks-lake',
+    googleMapsUrl: 'https://maps.google.com/?q=Inks+Lake+State+Park,+Burnet,+TX',
+    coordinates: { latitude: 30.74, longitude: -98.38 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'bastrop-nov',
-    parkName: 'Bastrop State Park',
-    location: 'Bastrop, Texas',
+    id: 'caddo-lake-nov',
+    parkName: 'Caddo Lake State Park',
+    location: 'Karnack, Texas',
     month: 'November',
-    dates: '7-9',
-    imageUrl: bastropNovImage,
-    features: ['Lost Pines Forest', 'Historic CCC Cabins', 'Scenic Park Road', '7 Miles of Trails'],
+    dates: '6-8',
+    imageUrl: caddoLakeNovImage,
+    features: ['Bald Cypress Forest', 'Spanish Moss', 'Bayou Paddling', 'Historic CCC Cabins'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
-    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX',
-    coordinates: { latitude: 30.11, longitude: -97.29 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/caddo-lake',
+    googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX',
+    coordinates: { latitude: 32.68, longitude: -94.17 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {

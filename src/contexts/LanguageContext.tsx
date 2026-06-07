@@ -75,6 +75,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.limitedSpots': 'Limited Spots',
     'events.soldOut': 'Sold Out',
     'events.comingSoon': 'Coming Soon',
+    'events.lastUpdated': 'Schedule last updated',
 
     // Filters
     'filters.filter': 'Filter',
@@ -224,6 +225,7 @@ const translations: Record<Language, Record<string, string>> = {
     'events.limitedSpots': 'Cupos Limitados',
     'events.soldOut': 'Agotado',
     'events.comingSoon': 'Próximamente',
+    'events.lastUpdated': 'Calendario actualizado',
 
     // Filters
     'filters.filter': 'Filtrar',
