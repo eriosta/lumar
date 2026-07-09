@@ -6,7 +6,7 @@ import goliadOctImage from '../assets/goliad-apr.jpg';
 import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import caddoLakeNovImage from '../assets/caddo-lake-apr.jpg';
 import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
-import huntsvilleDecImage from '../assets/huntsville-dec.jpg';
+import bastropDecImage from '../assets/bastrop-nov.jpg';
 
 export const events: CampingEvent[] = [
   {
@@ -122,19 +122,19 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'huntsville-dec',
-    parkName: 'Huntsville State Park',
-    location: 'Huntsville, Texas',
+    id: 'bastrop-dec',
+    parkName: 'Bastrop State Park',
+    location: 'Bastrop, Texas',
     month: 'December',
-    dates: '5-7',
-    imageUrl: huntsvilleDecImage,
-    features: ['210-Acre Lake Raven', '21 Miles of Trails', 'Kayak Rentals', 'Nature Center'],
+    dates: '4-6',
+    imageUrl: bastropDecImage,
+    features: ['Lost Pines Forest', '9+ Miles of Trails', 'Historic CCC Cabins', 'Fishing & Paddling'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/huntsville',
-    googleMapsUrl: 'https://maps.google.com/?q=Huntsville+State+Park,+Huntsville,+TX',
-    coordinates: { latitude: 30.63, longitude: -95.53 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/bastrop',
+    googleMapsUrl: 'https://maps.google.com/?q=Bastrop+State+Park,+Bastrop,+TX',
+    coordinates: { latitude: 30.11, longitude: -97.29 },
     campsiteType: 'Campsite with Water and Electricity'
   }
 ];
