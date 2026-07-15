@@ -1,30 +1,13 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import cleburneJunImage from '../assets/cleburne-jun.jpg';
 import mckinneyFallsJulImage from '../assets/mckinney-falls-jul.jpg';
 import garnerSepImage from '../assets/garner-sep.jpg';
 import goliadOctImage from '../assets/goliad-apr.jpg';
 import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import caddoLakeNovImage from '../assets/caddo-lake-apr.jpg';
-import lostMaplesNovImage from '../assets/lost-maples-nov.jpg';
+import daingerfieldNovImage from '../assets/daingerfield-nov.jpg';
 import bastropDecImage from '../assets/bastrop-nov.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'cleburne-jun',
-    parkName: 'Cleburne State Park',
-    location: 'Cleburne, Texas',
-    month: 'June',
-    dates: '19-21',
-    imageUrl: cleburneJunImage,
-    features: ['Cedar Lake Swimming', 'Limestone Bluffs', '8+ Miles of Trails', 'Wildlife Viewing'],
-    availableSpots: 0,
-    totalSpots: 4,
-    isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/cleburne',
-    googleMapsUrl: 'https://maps.google.com/?q=Cleburne+State+Park,+Cleburne,+TX',
-    coordinates: { latitude: 32.26, longitude: -97.56 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'mckinney-falls-jul',
     parkName: 'McKinney Falls State Park',
@@ -49,7 +32,7 @@ export const events: CampingEvent[] = [
     dates: '18-20',
     imageUrl: garnerSepImage,
     features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
-    availableSpots: 2,
+    availableSpots: 1,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
@@ -106,19 +89,19 @@ export const events: CampingEvent[] = [
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
-    id: 'lost-maples-nov',
-    parkName: 'Lost Maples State Natural Area',
-    location: 'Vanderpool, Texas',
+    id: 'daingerfield-nov',
+    parkName: 'Daingerfield State Park',
+    location: 'Daingerfield, Texas',
     month: 'November',
     dates: '27-29',
-    imageUrl: lostMaplesNovImage,
-    features: ['Fall Foliage', 'Bigtooth Maples', '10+ Miles of Trails', 'Canyon Views'],
+    imageUrl: daingerfieldNovImage,
+    features: ['80-Acre Spring-Fed Lake', 'Fall Foliage', 'Kayak & Paddleboat Rentals', 'Rustling Leaves Nature Trail'],
     availableSpots: 4,
     totalSpots: 4,
     isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/lost-maples',
-    googleMapsUrl: 'https://maps.google.com/?q=Lost+Maples+State+Natural+Area,+Vanderpool,+TX',
-    coordinates: { latitude: 29.81, longitude: -99.57 },
+    parkWebsite: 'https://tpwd.texas.gov/state-parks/daingerfield',
+    googleMapsUrl: 'https://maps.google.com/?q=Daingerfield+State+Park,+Daingerfield,+TX',
+    coordinates: { latitude: 33.00, longitude: -94.69 },
     campsiteType: 'Campsite with Water and Electricity'
   },
   {
