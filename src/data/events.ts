@@ -1,6 +1,4 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import mckinneyFallsJulImage from '../assets/mckinney-falls-jul.jpg';
-import garnerSepImage from '../assets/garner-sep.jpg';
 import goliadOctImage from '../assets/goliad-apr.jpg';
 import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import caddoLakeNovImage from '../assets/caddo-lake-apr.jpg';
@@ -8,38 +6,6 @@ import daingerfieldNovImage from '../assets/daingerfield-nov.jpg';
 import bastropDecImage from '../assets/bastrop-nov.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'mckinney-falls-jul',
-    parkName: 'McKinney Falls State Park',
-    location: 'Austin, Texas',
-    month: 'July',
-    dates: '24-26',
-    imageUrl: mckinneyFallsJulImage,
-    features: ['Upper & Lower Falls', 'Onion Creek', '9 Miles of Trails', 'Historic Smith Visitor Center'],
-    availableSpots: 0,
-    totalSpots: 4,
-    isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/mckinney-falls',
-    googleMapsUrl: 'https://maps.google.com/?q=McKinney+Falls+State+Park,+Austin,+TX',
-    coordinates: { latitude: 30.18, longitude: -97.72 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
-  {
-    id: 'garner-sep',
-    parkName: 'Garner State Park',
-    location: 'Concan, Texas',
-    month: 'September',
-    dates: '18-20',
-    imageUrl: garnerSepImage,
-    features: ['Frio River Swimming', '16 Miles of Trails', 'Summer Dances', 'Hill Country Views'],
-    availableSpots: 1,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/garner',
-    googleMapsUrl: 'https://maps.google.com/?q=Garner+State+Park,+Concan,+TX',
-    coordinates: { latitude: 29.59, longitude: -99.74 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'goliad-oct',
     parkName: 'Goliad State Park',
