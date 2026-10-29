@@ -1,43 +1,9 @@
 import { CampingEvent, Package, WhatsAppContact } from '../types';
-import goliadOctImage from '../assets/goliad-apr.jpg';
-import inksLakeOctImage from '../assets/inks-lake-oct.jpg';
 import caddoLakeNovImage from '../assets/caddo-lake-apr.jpg';
 import daingerfieldNovImage from '../assets/daingerfield-nov.jpg';
 import bastropDecImage from '../assets/bastrop-nov.jpg';
 
 export const events: CampingEvent[] = [
-  {
-    id: 'goliad-oct',
-    parkName: 'Goliad State Park',
-    location: 'Goliad, Texas',
-    month: 'October',
-    dates: '9-11',
-    imageUrl: goliadOctImage,
-    features: ['Mission Espíritu Santo', 'San Antonio River', 'Historic Trails', 'Bird Watching'],
-    availableSpots: 0,
-    totalSpots: 4,
-    isSoldOut: true,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/goliad',
-    googleMapsUrl: 'https://maps.google.com/?q=Goliad+State+Park,+Goliad,+TX',
-    coordinates: { latitude: 28.66, longitude: -97.39 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
-  {
-    id: 'inks-lake-oct',
-    parkName: 'Inks Lake State Park',
-    location: 'Burnet, Texas',
-    month: 'October',
-    dates: '23-25',
-    imageUrl: inksLakeOctImage,
-    features: ['Clear Blue Lake', 'Devil\'s Waterhole', 'Granite Outcrops', '9 Miles of Trails'],
-    availableSpots: 4,
-    totalSpots: 4,
-    isSoldOut: false,
-    parkWebsite: 'https://tpwd.texas.gov/state-parks/inks-lake',
-    googleMapsUrl: 'https://maps.google.com/?q=Inks+Lake+State+Park,+Burnet,+TX',
-    coordinates: { latitude: 30.74, longitude: -98.38 },
-    campsiteType: 'Campsite with Water and Electricity'
-  },
   {
     id: 'caddo-lake-nov',
     parkName: 'Caddo Lake State Park',
@@ -46,13 +12,13 @@ export const events: CampingEvent[] = [
     dates: '6-8',
     imageUrl: caddoLakeNovImage,
     features: ['Bald Cypress Forest', 'Spanish Moss', 'Bayou Paddling', 'Historic CCC Cabins'],
-    availableSpots: 4,
+    availableSpots: 2,
     totalSpots: 4,
     isSoldOut: false,
     parkWebsite: 'https://tpwd.texas.gov/state-parks/caddo-lake',
     googleMapsUrl: 'https://maps.google.com/?q=Caddo+Lake+State+Park,+Karnack,+TX',
     coordinates: { latitude: 32.68, longitude: -94.17 },
-    campsiteType: 'Campsite with Water and Electricity'
+    campsiteType: 'Campsite with Water'
   },
   {
     id: 'daingerfield-nov',
